@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createCheckoutSession } from "@/lib/stripe/checkout";
+
+export const dynamic = "force-dynamic";
 
 const CartItemSchema = z.object({
   id: z.string(),
@@ -22,6 +23,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { items } = CheckoutRequestSchema.parse(body);
 
+    const { createCheckoutSession } = await import("@/lib/stripe/checkout");
     const session = await createCheckoutSession(items);
 
     return NextResponse.json({ url: session.url });

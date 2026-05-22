@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe/client";
 import type Stripe from "stripe";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
+  const { stripe } = await import("@/lib/stripe/client");
   const body = await request.text();
   const signature = request.headers.get("stripe-signature");
 

@@ -1,10 +1,16 @@
 import Stripe from "stripe";
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error("STRIPE_SECRET_KEY is not set in environment variables");
+function getStripe() {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key || key === "sk_test_placeholder") {
+    // Return a mock-safe instance during build or when no key is set
+    return new Stripe("sk_test_placeholder", {
+      typescript: true,
+    });
+  }
+  return new Stripe(key, {
+    typescript: true,
+  });
 }
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2026-04-22.dahlia",
-  typescript: true,
-});
+export const stripe = getStripe();

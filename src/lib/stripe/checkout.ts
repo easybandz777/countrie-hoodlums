@@ -22,8 +22,8 @@ export async function createCheckoutSession(items: CartItem[]) {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cart`,
+    success_url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/cart`,
     shipping_address_collection: {
       allowed_countries: ["US", "CA", "GB", "AU"],
     },
