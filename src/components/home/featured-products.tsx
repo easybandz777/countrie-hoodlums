@@ -1,28 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/stores/cart-store";
+import { MOCK_PRODUCTS, type Product } from "@/lib/mock-data";
 
-const products = [
-  { id: "classic-hood-tee", slug: "classic-hood-tee", name: "Classic Hood Tee", price: 38 },
-  { id: "country-life-hoodie", slug: "country-life-hoodie", name: "Country Life Hoodie", price: 75 },
-  { id: "hoodlum-dad-hat", slug: "hoodlum-dad-hat", name: "Hoodlum Dad Hat", price: 32 },
-  { id: "sticker-pack", slug: "sticker-pack", name: "Sticker Pack", price: 12 },
-];
+const FEATURED = MOCK_PRODUCTS.filter((p) => p.isNew).slice(0, 4);
 
 export default function FeaturedProducts() {
   const addItem = useCartStore((s) => s.addItem);
   const openCart = useCartStore((s) => s.openCart);
 
-  const handleAddToCart = (product: (typeof products)[number]) => {
+  const handleAddToCart = (product: Product) => {
+    const size = product.sizes[0] || "One Size";
     addItem({
-      id: `${product.id}-one-size`,
+      id: `${product.id}-${size}`,
       productId: product.id,
       name: product.name,
       price: product.price,
-      size: "One Size",
+      size,
       quantity: 1,
-      image: "",
+      image: product.image,
       slug: product.slug,
     });
     openCart();
@@ -41,22 +39,31 @@ export default function FeaturedProducts() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {products.map((product) => (
+          {FEATURED.map((product) => (
             <div
               key={product.id}
               className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-accent hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]"
             >
-              {/* Placeholder Image */}
-              <div className="aspect-square bg-muted flex items-center justify-center">
-                <span className="text-muted-foreground text-sm uppercase tracking-wider">
-                  Image
-                </span>
-              </div>
+              {/* Product Image */}
+              <Link
+                href={`/shop/${product.slug}`}
+                className="relative block aspect-square overflow-hidden bg-muted"
+              >
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </Link>
 
               {/* Product Info */}
               <div className="p-4 space-y-3">
                 <h3 className="text-white font-medium text-sm uppercase tracking-wide">
-                  {product.name}
+                  <Link href={`/shop/${product.slug}`} className="hover:text-accent transition-colors">
+                    {product.name}
+                  </Link>
                 </h3>
                 <p className="text-accent font-bold text-lg font-display">
                   ${product.price}

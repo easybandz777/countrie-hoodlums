@@ -56,13 +56,7 @@ export default async function ProductPage({ params }: Props) {
 
   const related = getRelatedProducts(product);
 
-  // Placeholder gallery images
-  const galleryImages = [
-    product.image,
-    `${product.image.replace(".jpg", "-2.jpg")}`,
-    `${product.image.replace(".jpg", "-3.jpg")}`,
-    `${product.image.replace(".jpg", "-4.jpg")}`,
-  ];
+  const galleryImages = [product.image];
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -82,7 +76,7 @@ export default async function ProductPage({ params }: Props) {
       {/* Two-column layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left column: Image gallery */}
-        <ImageGallery images={galleryImages} />
+        <ImageGallery images={galleryImages} alt={product.name} />
 
         {/* Right column: Product info (client component for interactivity) */}
         <ProductInfo product={product} />

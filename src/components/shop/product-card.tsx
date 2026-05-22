@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/stores/cart-store";
 import type { Product } from "@/lib/mock-data";
@@ -29,18 +30,20 @@ export default function ProductCard({ product }: ProductCardProps) {
     openCart();
   };
 
-  const initial = product.name.charAt(0).toUpperCase();
-
   return (
     <Link
       href={`/shop/${product.slug}`}
       className="group relative flex flex-col rounded-lg border border-border bg-card overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-gold hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]"
     >
       {/* Image area */}
-      <div className="relative aspect-square bg-muted flex items-center justify-center overflow-hidden">
-        <span className="text-5xl font-bold text-muted-foreground/40 font-[family-name:var(--font-display)] select-none">
-          {initial}
-        </span>
+      <div className="relative aspect-square bg-muted overflow-hidden">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
 
         {/* Badges */}
         {product.isNew && !product.isSoldOut && (
