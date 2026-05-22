@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { sendWelcomeEmail } from "@/lib/email";
+
+export const dynamic = "force-dynamic";
 
 const subscribeSchema = z.object({
   email: z.string().email("Please enter a valid email address."),
@@ -40,6 +41,7 @@ export async function POST(request: NextRequest) {
     console.log(`[Newsletter] New subscriber: ${normalizedEmail}`);
 
     // Send welcome email
+    const { sendWelcomeEmail } = await import("@/lib/email");
     const emailResult = await sendWelcomeEmail(normalizedEmail);
     if (!emailResult.success) {
       console.error(

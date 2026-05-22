@@ -1,6 +1,15 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key || key === "re_placeholder") {
+    // Return instance with a dummy key for build time — won't actually send
+    return new Resend("re_build_placeholder_key");
+  }
+  return new Resend(key);
+}
+
+const resend = getResend();
 
 const FROM_ADDRESS = "Countrie Hoodlums <noreply@countriehoodlums.com>";
 
