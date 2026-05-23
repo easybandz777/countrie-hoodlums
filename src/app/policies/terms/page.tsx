@@ -89,10 +89,10 @@ export default function TermsOfServicePage() {
       <p>
         If you have questions about these terms, contact us at{" "}
         <a
-          href="mailto:support@countriehoodlums.com"
+          href="mailto:support@thecountriehoodlums.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          support@countriehoodlums.com
+          support@thecountriehoodlums.com
         </a>
         .
       </p>

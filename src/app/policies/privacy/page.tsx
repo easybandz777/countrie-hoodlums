@@ -91,10 +91,10 @@ export default function PrivacyPolicyPage() {
         For privacy-related questions or to exercise your rights, contact us
         at{" "}
         <a
-          href="mailto:privacy@countriehoodlums.com"
+          href="mailto:privacy@thecountriehoodlums.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          privacy@countriehoodlums.com
+          privacy@thecountriehoodlums.com
         </a>
         .
       </p>

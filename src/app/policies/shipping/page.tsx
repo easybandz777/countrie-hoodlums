@@ -55,10 +55,10 @@ export default function ShippingPolicyPage() {
         If you have any questions about shipping or need help with your order,
         reach out to us at{" "}
         <a
-          href="mailto:support@countriehoodlums.com"
+          href="mailto:support@thecountriehoodlums.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          support@countriehoodlums.com
+          support@thecountriehoodlums.com
         </a>
         .
       </p>

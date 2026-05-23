@@ -11,7 +11,7 @@ function getResend() {
 
 const resend = getResend();
 
-const FROM_ADDRESS = "Countrie Hoodlums <noreply@countriehoodlums.com>";
+const FROM_ADDRESS = "Countrie Hoodlums <noreply@thecountriehoodlums.com>";
 
 type EmailResult = { success: true } | { success: false; error: string };
 

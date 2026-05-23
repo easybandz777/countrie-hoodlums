@@ -59,10 +59,10 @@ export default function ReturnsPolicyPage() {
       <p>
         To start a return or exchange, email us at{" "}
         <a
-          href="mailto:support@countriehoodlums.com"
+          href="mailto:support@thecountriehoodlums.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          support@countriehoodlums.com
+          support@thecountriehoodlums.com
         </a>{" "}
         with your order number and the reason for the return. We&apos;ll get
         back to you with instructions within 1-2 business days.

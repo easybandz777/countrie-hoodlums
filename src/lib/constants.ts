@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: "Countrie Hoodlums",
   description:
     "Premium streetwear rooted in culture. Rep where you come from with gear that speaks for itself.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://countriehoodlums.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://thecountriehoodlums.com",
   socials: {
     instagram: "https://instagram.com/countriehoodlums",
     tiktok: "https://tiktok.com/@countriehoodlums",
@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
     facebook: "https://facebook.com/countriehoodlums",
   },
   freeShippingThreshold: 75,
-  email: "info@countriehoodlums.com",
+  email: "info@thecountriehoodlums.com",
 } as const;
 
 export const NAV_LINKS = [

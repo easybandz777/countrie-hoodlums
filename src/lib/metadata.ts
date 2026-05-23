@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const BASE_URL = "https://countriehoodlums.com";
+const BASE_URL = "https://thecountriehoodlums.com";
 const DEFAULT_OG_IMAGE = "/og-image.jpg";
 const SITE_NAME = "Countrie Hoodlums";
 

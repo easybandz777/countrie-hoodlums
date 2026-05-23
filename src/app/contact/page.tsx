@@ -224,10 +224,10 @@ export default function ContactPage() {
               </h3>
             </div>
             <a
-              href="mailto:info@countriehoodlums.com"
+              href="mailto:info@thecountriehoodlums.com"
               className="text-muted-foreground hover:text-gold transition-colors text-sm"
             >
-              info@countriehoodlums.com
+              info@thecountriehoodlums.com
             </a>
           </div>
 
