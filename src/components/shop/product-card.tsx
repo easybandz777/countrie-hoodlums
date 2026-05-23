@@ -35,14 +35,22 @@ export default function ProductCard({ product }: ProductCardProps) {
       href={`/shop/${product.slug}`}
       className="group relative flex flex-col rounded-lg border border-border bg-card overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-gold hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]"
     >
-      {/* Image area */}
+      {/* Image area with photo → cartoon hover swap */}
       <div className="relative aspect-square bg-muted overflow-hidden">
         <Image
           src={product.image}
           alt={product.name}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-opacity duration-500 group-hover:opacity-0"
+        />
+        <Image
+          src={product.cartoonImage}
+          alt=""
+          aria-hidden
+          fill
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         />
 
         {/* Badges */}

@@ -9,6 +9,7 @@ export interface Product {
   description: string;
   sizes: string[];
   image: string;
+  cartoonImage: string;
 }
 
 export const MOCK_PRODUCTS: Product[] = [
@@ -25,6 +26,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Heavyweight black pullover with gold embroidered chest logo and skull-cowboy badge. The flagship hoodie.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
     image: "/images/products/hoodie-heritage.webp",
+    cartoonImage: "/images/products/hoodie-heritage-cartoon.webp",
   },
   {
     id: "prod_002",
@@ -38,6 +40,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Oversized washed charcoal pullover. Full-back sunset-and-dirt-road print with the mantra arched in cream and gold.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/hoodie-live-each-day.webp",
+    cartoonImage: "/images/products/hoodie-live-each-day-cartoon.webp",
   },
   {
     id: "prod_003",
@@ -51,6 +54,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Heavyweight 450gsm forest-camo pullover with dripping liquid-gold chest type. Limited drop.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/hoodie-camo-crossover.webp",
+    cartoonImage: "/images/products/hoodie-camo-crossover-cartoon.webp",
   },
   {
     id: "prod_004",
@@ -64,6 +68,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Full-zip with biker-patch crest on the back: crossed shotgun and fishing rod, EST. 2024 arc. YKK metal zipper.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/hoodie-crew.webp",
+    cartoonImage: "/images/products/hoodie-crew-cartoon.webp",
   },
   {
     id: "prod_005",
@@ -77,6 +82,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Forest green oversized pullover with a golden tree-of-life graphic. Roots spell COUNTRIE, branches spell HOODLUMS.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/hoodie-from-the-dirt.webp",
+    cartoonImage: "/images/products/hoodie-from-the-dirt-cartoon.webp",
   },
 
   // ---------- TEES ----------
@@ -92,6 +98,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Garment-dyed heavyweight black tee. Stacked cream-gold COUNTRIE HOODLUMS with cracked vintage print texture.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/tee-og-logo.webp",
+    cartoonImage: "/images/products/tee-og-logo-cartoon.webp",
   },
   {
     id: "prod_007",
@@ -105,6 +112,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Off-white oversized cotton. Burnout-truck illustration with the dual-identity slogan in gold-outlined brown.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/tee-country-raised.webp",
+    cartoonImage: "/images/products/tee-country-raised-cartoon.webp",
   },
   {
     id: "prod_008",
@@ -118,6 +126,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Tattoo-style cowboy skull with gold grillz, crossed fishing rods, and blackletter brand arc on premium black cotton.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/tee-skull-country.webp",
+    cartoonImage: "/images/products/tee-skull-country-cartoon.webp",
   },
   {
     id: "prod_009",
@@ -131,6 +140,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Heather gray varsity print. PROPERTY OF · COUNTRIE HOODLUMS · ATHLETIC DEPT. with cracked vintage screenprint.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/tee-property-of.webp",
+    cartoonImage: "/images/products/tee-property-of-cartoon.webp",
   },
   {
     id: "prod_010",
@@ -144,6 +154,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Premium black tee with framed bonfire-at-night back print in warm gold tones. Small CH front chest hit.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/tee-scenic-back.webp",
+    cartoonImage: "/images/products/tee-scenic-back-cartoon.webp",
   },
   {
     id: "prod_011",
@@ -157,6 +168,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Washed vintage-black oversized fit. Massive HOODLUM impact font with gold drop-shadow, tiny countrie cursive above.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/tee-bold-statement.webp",
+    cartoonImage: "/images/products/tee-bold-statement-cartoon.webp",
   },
 
   // ---------- HATS ----------
@@ -172,6 +184,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Richardson 112 — black twill front, woodland camo mesh back, gold rope-style embroidered logo.",
     sizes: ["One Size"],
     image: "/images/products/hat-classic-trucker.webp",
+    cartoonImage: "/images/products/hat-classic-trucker-cartoon.webp",
   },
   {
     id: "prod_013",
@@ -185,6 +198,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Richardson 112 all-black with laser-engraved CH genuine leather patch. Handcrafted small-batch feel.",
     sizes: ["One Size"],
     image: "/images/products/hat-leather-patch.webp",
+    cartoonImage: "/images/products/hat-leather-patch-cartoon.webp",
   },
   {
     id: "prod_014",
@@ -198,6 +212,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Richardson 320 olive drab unstructured. Minimal gold skull-cowboy embroidery, brass-buckle strap back.",
     sizes: ["One Size"],
     image: "/images/products/hat-dad-hat.webp",
+    cartoonImage: "/images/products/hat-dad-hat-cartoon.webp",
   },
   {
     id: "prod_015",
@@ -211,6 +226,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Richardson 511 flat brim. Black panels with metallic gold brim and 3D puff CH monogram.",
     sizes: ["One Size"],
     image: "/images/products/hat-snapback.webp",
+    cartoonImage: "/images/products/hat-snapback-cartoon.webp",
   },
 
   // ---------- CREWNECKS (grouped under hoodies) ----------
@@ -226,6 +242,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Washed sage green brushed fleece. Retro collegiate COUNTRIE HOODLUMS in cream with gold outline.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/crewneck-vintage.webp",
+    cartoonImage: "/images/products/crewneck-vintage-cartoon.webp",
   },
   {
     id: "prod_017",
@@ -239,6 +256,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Heavyweight 450gsm black crewneck. Minimal gold chain-stitch Countrie Hoodlums script on the left chest.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/crewneck-embroidered.webp",
+    cartoonImage: "/images/products/crewneck-embroidered-cartoon.webp",
   },
   {
     id: "prod_018",
@@ -252,6 +270,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Charcoal heather crewneck with a golden compass-rose graphic and dirt-road horizon at the center.",
     sizes: ["S", "M", "L", "XL", "2XL"],
     image: "/images/products/crewneck-graphic.webp",
+    cartoonImage: "/images/products/crewneck-graphic-cartoon.webp",
   },
 
   // ---------- ACCESSORIES ----------
@@ -267,6 +286,7 @@ export const MOCK_PRODUCTS: Product[] = [
       "Six die-cut vinyl stickers featuring the full Countrie Hoodlums collection. Waterproof and weatherproof.",
     sizes: [],
     image: "/images/products/collection-flatlay.webp",
+    cartoonImage: "/images/products/collection-flatlay-cartoon.webp",
   },
   {
     id: "prod_020",
@@ -280,5 +300,6 @@ export const MOCK_PRODUCTS: Product[] = [
       "Four enamel pins capturing the brand mood: hoodie, hat, lantern stack, bonfire cooler. Gold edges throughout.",
     sizes: [],
     image: "/images/products/lifestyle-moodboard.webp",
+    cartoonImage: "/images/products/lifestyle-moodboard-cartoon.webp",
   },
 ];

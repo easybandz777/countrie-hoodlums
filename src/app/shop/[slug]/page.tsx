@@ -56,7 +56,7 @@ export default async function ProductPage({ params }: Props) {
 
   const related = getRelatedProducts(product);
 
-  const galleryImages = [product.image];
+  const galleryImages = [product.image, product.cartoonImage];
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">

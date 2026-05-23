@@ -44,7 +44,7 @@ export default function FeaturedProducts() {
               key={product.id}
               className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-accent hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]"
             >
-              {/* Product Image */}
+              {/* Product Image with photo → cartoon hover swap */}
               <Link
                 href={`/shop/${product.slug}`}
                 className="relative block aspect-square overflow-hidden bg-muted"
@@ -54,7 +54,15 @@ export default function FeaturedProducts() {
                   alt={product.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-opacity duration-500 group-hover:opacity-0"
+                />
+                <Image
+                  src={product.cartoonImage}
+                  alt=""
+                  aria-hidden
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 />
               </Link>
 
