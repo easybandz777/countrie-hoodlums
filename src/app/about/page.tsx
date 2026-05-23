@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,14 +14,14 @@ export const metadata: Metadata = {
 };
 
 const crewMembers = [
-  { name: "Gregory", tagline: "The mastermind. Quiet until he ain't." },
-  { name: "Glass", tagline: "If it's broken, he probably did it — on purpose." },
-  { name: "Gary", tagline: "The one your mama warned you about." },
-  { name: "Bobby", tagline: "Loud, wrong, and confident about it." },
-  { name: "Willie", tagline: "Smooth talk, dirt road walk." },
-  { name: "Bubba", tagline: "Built different. Eats different too." },
-  { name: "Krissy", tagline: "The boss. Everybody knows it." },
-  { name: "LuLu", tagline: "Chaos with a smile." },
+  { name: "Gregory", tagline: "The mastermind. Quiet until he ain't.", image: "/images/crew/gregory.webp" },
+  { name: "Glass", tagline: "If it's broken, he probably did it — on purpose.", image: "/images/crew/glass.webp" },
+  { name: "Gary", tagline: "The one your mama warned you about.", image: "/images/crew/gary.webp" },
+  { name: "Bobby", tagline: "Loud, wrong, and confident about it.", image: "/images/crew/bobby.webp" },
+  { name: "Willie", tagline: "Smooth talk, dirt road walk.", image: "/images/crew/willie.webp" },
+  { name: "Bubba", tagline: "Built different. Eats different too.", image: "/images/crew/bubba.webp" },
+  { name: "Krissy", tagline: "The boss. Everybody knows it.", image: "/images/crew/krissy.webp" },
+  { name: "LuLu", tagline: "Chaos with a smile.", image: "/images/crew/lulu.webp" },
 ];
 
 const socials = [
@@ -169,19 +170,22 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 md:gap-10">
             {crewMembers.map((member) => (
               <div key={member.name} className="group flex flex-col items-center text-center">
-                {/* Circular avatar placeholder */}
+                {/* Circular cartoon portrait */}
                 <div className="relative mb-4">
                   <div
-                    className="w-28 h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
+                    className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-105"
                     style={{ backgroundColor: "#1A1A1A" }}
                   >
-                    {/* Gold ring on hover */}
-                    <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-accent transition-colors duration-300" />
-                    {/* Initials as placeholder */}
-                    <span className="font-display text-2xl md:text-3xl font-bold text-accent/60 group-hover:text-accent transition-colors duration-300">
-                      {member.name[0]}
-                    </span>
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} — ${member.tagline}`}
+                      fill
+                      sizes="128px"
+                      className="object-cover"
+                    />
                   </div>
+                  {/* Gold ring on hover */}
+                  <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-accent transition-colors duration-300 pointer-events-none" />
                 </div>
 
                 {/* Name */}
