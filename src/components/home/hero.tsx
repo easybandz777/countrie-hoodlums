@@ -1,29 +1,37 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="relative h-[90vh] min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background — cinematic dark gradient with subtle radial accents */}
+      {/* Background — Country Hoodlums cartoon gang */}
+      <Image
+        src="/images/hero-gang.webp"
+        alt="The Country Hoodlums crew"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center z-0"
+      />
+
+      {/* Dark gradient overlays on top of image so text stays readable */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-[1]"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 50% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 40% at 20% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
-            radial-gradient(ellipse 50% 50% at 80% 70%, rgba(100, 60, 20, 0.05) 0%, transparent 50%),
-            linear-gradient(to bottom, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.7) 50%, rgba(10, 10, 10, 0.95) 100%),
-            linear-gradient(135deg, #0A0A0A 0%, #1a1206 25%, #0f0f0f 50%, #140e05 75%, #0A0A0A 100%)
+            radial-gradient(ellipse 80% 50% at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+            linear-gradient(to bottom, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.4) 40%, rgba(10, 10, 10, 0.75) 80%, rgba(10, 10, 10, 0.98) 100%)
           `,
         }}
       />
 
-      {/* Dark overlay from bottom for depth */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
+      {/* Extra bottom fade for scroll handoff */}
+      <div className="absolute inset-0 z-[2] bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-[3] flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
         {/* Main Headline */}
         <h1
           className="font-display font-bold text-foreground uppercase tracking-tight opacity-0 animate-fade-up"
@@ -68,7 +76,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-0 animate-fade-up"
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[3] flex flex-col items-center gap-2 opacity-0 animate-fade-up"
         style={{ animationDelay: "1.2s" }}
       >
         <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-body">
