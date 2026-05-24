@@ -165,22 +165,23 @@ async function pickVariants(productId, colorName, wantedSizes) {
   return matches;
 }
 
-async function getFrontPrintArea(productId, variantId) {
+async function getPrintArea(productId, variantId, placement) {
   const spec = await pfJson(`/mockup-generator/printfiles/${productId}`);
   const r = spec.result;
   const vp = r.variant_printfiles.find((v) => v.variant_id === variantId);
-  if (!vp?.placements?.front) {
+  const pfId = vp?.placements?.[placement];
+  if (!pfId) {
     throw new Error(
-      `Product ${productId} has no 'front' placement for variant ${variantId}`
+      `Product ${productId} has no '${placement}' placement for variant ${variantId}`
     );
   }
-  const pf = r.printfiles.find((p) => p.printfile_id === vp.placements.front);
-  if (!pf) throw new Error(`Printfile ${vp.placements.front} not found in spec`);
+  const pf = r.printfiles.find((p) => p.printfile_id === pfId);
+  if (!pf) throw new Error(`Printfile ${pfId} not found in spec`);
   return { width: pf.width, height: pf.height };
 }
 
-async function generateMockups(productId, imageUrl, variantIds) {
-  const area = await getFrontPrintArea(productId, variantIds[0]);
+async function generateMockups(productId, imageUrl, variantIds, placement) {
+  const area = await getPrintArea(productId, variantIds[0], placement);
   const task = await pfJson(
     `/mockup-generator/create-task/${productId}`,
     {
@@ -190,7 +191,7 @@ async function generateMockups(productId, imageUrl, variantIds) {
         format: "jpg",
         files: [
           {
-            placement: "front",
+            placement,
             image_url: imageUrl,
             position: {
               area_width: area.width,
@@ -240,6 +241,7 @@ async function createOrFetchSyncProduct({
   variants,
   fileId,
   mockupUrl,
+  placement,
 }) {
   const externalId = `ch-${slug}`;
   const existing = await findExistingSyncProduct(externalId);
@@ -259,7 +261,7 @@ async function createOrFetchSyncProduct({
         external_id: `${externalId}-${v.size}`,
         retail_price: price.toFixed(2),
         variant_id: v.id,
-        files: [{ id: fileId, placement: "front" }],
+        files: [{ id: fileId, placement }],
       })),
     }),
   });
@@ -323,12 +325,14 @@ async function processProduct(p, opts) {
   const variants = await pickVariants(p.productId, p.color, p.sizes);
   console.log(`      matched ${variants.length} variants`);
 
-  console.log(`  3/5 generating mockups...`);
+  const placement = opts.placement ?? "front";
+  console.log(`  3/5 generating mockups (placement: ${placement})...`);
   const artworkUrl = `${process.env.PRINTFUL_ARTWORK_URL_BASE.replace(/\/$/, "")}/${p.slug}.png`;
   const mockups = await generateMockups(
     p.productId,
     artworkUrl,
-    variants.map((v) => v.id)
+    variants.map((v) => v.id),
+    placement
   );
   const front = mockups[0];
   const mockupUrl = front?.mockup_url;
@@ -346,6 +350,7 @@ async function processProduct(p, opts) {
     variants,
     fileId: file.id,
     mockupUrl,
+    placement,
   });
   const variantIdsBySize = {};
   for (const sv of sync.sync_variants ?? []) {
@@ -375,6 +380,9 @@ async function main() {
   const slugArg = args.includes("--slug")
     ? args[args.indexOf("--slug") + 1]
     : null;
+  const placementArg = args.includes("--placement")
+    ? args[args.indexOf("--placement") + 1]
+    : "front";
   const dryRun = args.includes("--dry-run");
 
   await loadEnv();
@@ -392,7 +400,7 @@ async function main() {
   const results = [];
   for (const p of targets) {
     try {
-      results.push(await processProduct(p, { dryRun }));
+      results.push(await processProduct(p, { dryRun, placement: placementArg }));
     } catch (err) {
       console.error(`  ERROR: ${err.message}`);
       results.push({ slug: p.slug, status: "error", error: err.message });
