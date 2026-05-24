@@ -90,6 +90,24 @@ const PIECES = [
     placement: "front",
     label: "Homecoming '24 Crew (Champion S149 Black, tackle-twill 24 front)",
   },
+  {
+    number: 5,
+    slug: "piece-05-hoodlums-only",
+    artworkFile: "piece-05-hood.png",
+    catalogProductId: 970,
+    variantId: 24852, // CC 1567 Pepper, L
+    placement: "front",
+    label: "HOODLUMS ONLY Hoodie (CC 1567 Pepper, chest print preview — hood-top placement not in Printful)",
+  },
+  {
+    number: 7,
+    slug: "piece-07-chapter-01",
+    artworkFile: "piece-07-front.png",
+    catalogProductId: 839,
+    variantId: 21982, // CC 1566 Pepper, L
+    placement: "front",
+    label: "Chapter 01 Pocket Crest Crewneck (CC 1566 Pepper, front crest)",
+  },
 ];
 
 const PF_BASE = "https://api.printful.com";
