@@ -285,6 +285,22 @@ export const MOCK_PRODUCTS: Product[] = [
       "XL": 5324419525,
     },
   },
+  {
+    id: "prod_027",
+    name: "Anonymous Hoodlum Tee",
+    slug: "tee-anonymous-hoodlum",
+    price: 48,
+    category: "tees",
+    isNew: true,
+    isSoldOut: false,
+    description:
+      "Limited drop. Garment-dyed heavyweight black tee (Comfort Colors 1717). Hooded figure in a Guy Fawkes mask in front of a wall of matrix-green code monitors — with a tiny gold HCC monogram tucked in the corner. If you know, you know.",
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    image: "/images/products/tee-anonymous-hoodlum.webp",
+    cartoonImage: "/images/products/tee-anonymous-hoodlum.webp",
+    printfulProductId: 586,
+    printfulColor: "Black",
+  },
 
   // ---------- HATS (NOT Printful — leather/embroidered, sourced separately) ----------
   {
