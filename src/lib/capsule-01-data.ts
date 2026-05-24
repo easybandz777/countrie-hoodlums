@@ -177,6 +177,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Hood down, nobody knows. Hood up, everybody does.",
     printfulProductId: 970,
     fulfillmentPath: "off-platform",
+    previewImage: "/images/products/capsule-01/piece-05-hoodlums-only.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "6",
@@ -215,6 +217,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "One of five hundred. Center is for everybody else.",
     printfulProductId: 839,
     fulfillmentPath: "printful-with-finishing",
+    previewImage: "/images/products/capsule-01/piece-07-chapter-01.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "8",
@@ -233,6 +237,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Charter members only. No. 024 of 150. Bad decisions, good times.",
     printfulProductId: 464,
     fulfillmentPath: "off-platform",
+    previewImage: "/artwork/capsule-01/piece-08-front.png",
+    previewIsProductMockup: false,
   },
   {
     number: "9",
