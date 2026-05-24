@@ -34,7 +34,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
   };
 
   const handleShareX = () => {
-    const tweetText = encodeURIComponent(`${title} — Countrie Hoodlums`);
+    const tweetText = encodeURIComponent(`${title} — Hoodlums Country Club`);
     const tweetUrl = encodeURIComponent(url);
     window.open(
       `https://x.com/intent/tweet?text=${tweetText}&url=${tweetUrl}`,

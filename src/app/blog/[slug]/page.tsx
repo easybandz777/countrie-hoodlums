@@ -10,9 +10,9 @@ interface Props {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) return { title: "Post Not Found | Countrie Hoodlums" };
+  if (!post) return { title: "Post Not Found | Hoodlums Country Club" };
   return {
-    title: `${post.title} | Countrie Hoodlums`,
+    title: `${post.title} | Hoodlums Country Club`,
     description: post.excerpt,
   };
 }

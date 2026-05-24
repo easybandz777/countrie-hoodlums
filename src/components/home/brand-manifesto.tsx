@@ -62,7 +62,7 @@ export default function BrandManifesto() {
             with comedy, culture, and zero apologies.
           </p>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-body">
-            Countrie Hoodlums is more than merch. It&apos;s a mindset. It&apos;s
+            Hoodlums Country Club is more than merch. It&apos;s a mindset. It&apos;s
             for the ones who fish in the morning and hit the studio at night. The
             ones who rep both sides because both sides raised us.
           </p>

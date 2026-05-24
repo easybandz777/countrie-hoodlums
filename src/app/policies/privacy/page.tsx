@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Countrie Hoodlums",
+  title: "Privacy Policy | Hoodlums Country Club",
   description:
-    "How Countrie Hoodlums collects, uses, and protects your personal information.",
+    "How Hoodlums Country Club collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -91,10 +91,10 @@ export default function PrivacyPolicyPage() {
         For privacy-related questions or to exercise your rights, contact us
         at{" "}
         <a
-          href="mailto:privacy@thecountriehoodlums.com"
+          href="mailto:privacy@thehoodlumscountryclub.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          privacy@thecountriehoodlums.com
+          privacy@thehoodlumscountryclub.com
         </a>
         .
       </p>

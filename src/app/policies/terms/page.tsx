@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Countrie Hoodlums",
+  title: "Terms of Service | Hoodlums Country Club",
   description:
-    "Terms and conditions for using the Countrie Hoodlums website and purchasing our products.",
+    "Terms and conditions for using the Hoodlums Country Club website and purchasing our products.",
 };
 
 export default function TermsOfServicePage() {
@@ -16,7 +16,7 @@ export default function TermsOfServicePage() {
 
       <h2>Acceptance of Terms</h2>
       <p>
-        By accessing and using the Countrie Hoodlums website, you agree to be
+        By accessing and using the Hoodlums Country Club website, you agree to be
         bound by these Terms of Service. If you do not agree with any part of
         these terms, please do not use our website or purchase our products.
       </p>
@@ -54,7 +54,7 @@ export default function TermsOfServicePage() {
       <p>
         All content on this website — including but not limited to designs,
         logos, graphics, text, images, and product names — is the exclusive
-        property of Countrie Hoodlums and is protected by copyright and
+        property of Hoodlums Country Club and is protected by copyright and
         trademark laws.
       </p>
       <p>
@@ -64,7 +64,7 @@ export default function TermsOfServicePage() {
 
       <h2>Limitation of Liability</h2>
       <p>
-        Countrie Hoodlums shall not be liable for any indirect, incidental,
+        Hoodlums Country Club shall not be liable for any indirect, incidental,
         special, or consequential damages arising from your use of this website
         or purchase of our products. Our total liability for any claim shall
         not exceed the amount you paid for the specific product in question.
@@ -89,10 +89,10 @@ export default function TermsOfServicePage() {
       <p>
         If you have questions about these terms, contact us at{" "}
         <a
-          href="mailto:support@thecountriehoodlums.com"
+          href="mailto:support@thehoodlumscountryclub.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          support@thecountriehoodlums.com
+          support@thehoodlumscountryclub.com
         </a>
         .
       </p>

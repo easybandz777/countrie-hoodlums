@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Print-ready artwork (locally generated PNGs, not source-controlled)
+/artwork/
+
+# Raw logo source files (processed versions live under /public/images/)
+/new logo.png
+/logo cartoon .png

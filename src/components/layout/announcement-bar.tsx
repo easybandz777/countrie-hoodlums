@@ -63,13 +63,13 @@ function MarqueeContent() {
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
       <span>New Drop Coming Soon</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
-      <span>Countrie Hoodlums</span>
+      <span>Hoodlums Country Club</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
       <span>Free Shipping on Orders $75+</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
       <span>New Drop Coming Soon</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
-      <span>Countrie Hoodlums</span>
+      <span>Hoodlums Country Club</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
     </span>
   );

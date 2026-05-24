@@ -6,10 +6,10 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative h-[90vh] min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background — Country Hoodlums cartoon gang */}
+      {/* Background — Hoodlums Country Club cartoon gang */}
       <Image
         src="/images/hero-gang.webp"
-        alt="The Country Hoodlums crew"
+        alt="The Hoodlums Country Club crew"
         fill
         priority
         sizes="100vw"
@@ -32,25 +32,27 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-[3] flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
-        {/* Main Headline */}
-        <h1
-          className="font-display font-bold text-foreground uppercase tracking-tight opacity-0 animate-fade-up"
-          style={{
-            fontSize: "clamp(3rem, 8vw, 7rem)",
-            lineHeight: 1,
-            animationDelay: "0.2s",
-          }}
+        {/* Logo */}
+        <div
+          className="opacity-0 animate-fade-up w-full max-w-md md:max-w-lg lg:max-w-xl"
+          style={{ animationDelay: "0.2s" }}
         >
-          Countrie Hoodlums
-        </h1>
+          <Image
+            src="/images/logo-hcc.webp"
+            alt="Hoodlums Country Club"
+            width={720}
+            height={720}
+            priority
+            className="w-full h-auto"
+          />
+        </div>
 
-        {/* Subtitle */}
+        {/* Tagline */}
         <p
-          className="mt-6 text-muted-foreground text-lg md:text-xl lg:text-2xl max-w-2xl font-body leading-relaxed opacity-0 animate-fade-up"
+          className="mt-4 text-accent text-base md:text-lg lg:text-xl uppercase tracking-[0.3em] font-display font-bold opacity-0 animate-fade-up"
           style={{ animationDelay: "0.5s" }}
         >
-          Just a bunch of Country Motherfuckerz that live each day like it&apos;s
-          our Last
+          Bad Decisions &middot; Good Times
         </p>
 
         {/* CTA Buttons */}
@@ -64,14 +66,12 @@ export default function Hero() {
           >
             Shop Now
           </Link>
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/about"
             className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold uppercase tracking-widest border-2 border-white text-white rounded hover:bg-white hover:text-background transition-colors duration-200"
           >
-            Watch Us
-          </a>
+            Our Story
+          </Link>
         </div>
       </div>
 

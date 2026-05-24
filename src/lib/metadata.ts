@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
-const BASE_URL = "https://thecountriehoodlums.com";
+const BASE_URL = "https://thehoodlumscountryclub.com";
 const DEFAULT_OG_IMAGE = "/og-image.jpg";
-const SITE_NAME = "Countrie Hoodlums";
+const SITE_NAME = "Hoodlums Country Club";
 
 export function generatePageMetadata(
   title: string,

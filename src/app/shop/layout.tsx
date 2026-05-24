@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shop | Countrie Hoodlums",
+  title: "Shop | Hoodlums Country Club",
   description:
-    "Browse the full Countrie Hoodlums collection — tees, hoodies, hats, accessories, and more.",
+    "Browse the full Hoodlums Country Club collection — tees, hoodies, hats, accessories, and more.",
 };
 
 export default function ShopLayout({

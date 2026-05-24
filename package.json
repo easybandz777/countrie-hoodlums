@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "printful:setup": "node scripts/printful-setup.mjs",
+    "printful:setup:dry": "node scripts/printful-setup.mjs --dry-run"
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.6.0",

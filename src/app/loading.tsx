@@ -7,7 +7,7 @@ export default function Loading() {
 
         {/* Brand name with pulse */}
         <h1 className="font-display text-xl md:text-2xl font-bold text-white tracking-[0.3em] animate-pulse">
-          COUNTRIE HOODLUMS
+          HOODLUMS COUNTRY CLUB
         </h1>
       </div>
     </div>

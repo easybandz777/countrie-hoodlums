@@ -32,12 +32,12 @@ export default function InstagramFeed() {
             FOLLOW THE MOVEMENT
           </h2>
           <a
-            href="https://instagram.com/countriehoodlums"
+            href="https://instagram.com/hoodlumscountryclub"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-3 text-accent hover:text-white text-sm font-medium transition-colors duration-200"
           >
-            @countriehoodlums
+            @hoodlumscountryclub
           </a>
         </div>
 
@@ -68,12 +68,12 @@ export default function InstagramFeed() {
         {/* CTA Button */}
         <div className="text-center mt-10">
           <a
-            href="https://instagram.com/countriehoodlums"
+            href="https://instagram.com/hoodlumscountryclub"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-black font-semibold text-sm uppercase tracking-widest px-8 py-3 rounded transition-colors duration-200"
           >
-            Follow us @countriehoodlums
+            Follow us @hoodlumscountryclub
           </a>
         </div>
       </div>

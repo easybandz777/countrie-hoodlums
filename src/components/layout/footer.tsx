@@ -103,21 +103,6 @@ const policyLinks = [
 
 const socialLinks = [
   {
-    label: "Instagram",
-    href: "https://instagram.com/countriehoodlums",
-    icon: InstagramIcon,
-  },
-  {
-    label: "TikTok",
-    href: "https://tiktok.com/@countrie.hoodlums",
-    icon: TikTokIcon,
-  },
-  {
-    label: "YouTube",
-    href: "https://youtube.com/@Countriehoodlums",
-    icon: YouTubeIcon,
-  },
-  {
     label: "Facebook",
     href: "https://facebook.com/people/Countrie-Hoodlums/61585880894365/",
     icon: FacebookIcon,
@@ -144,11 +129,10 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div className="space-y-4">
             <h2 className="text-white text-xl font-bold tracking-widest uppercase font-display">
-              COUNTRIE HOODLUMS
+              HOODLUMS COUNTRY CLUB
             </h2>
             <p className="text-[#8A8A8A] text-sm leading-relaxed">
-              Just a bunch of Country Motherfuckerz that live each day like
-              it&apos;s our Last
+              Bad Decisions &middot; Good Times
             </p>
             <div className="flex items-center gap-4 pt-2">
               {socialLinks.map((social) => (
@@ -265,7 +249,7 @@ export default function Footer() {
       <div className="border-t border-[#2A2A2A]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#8A8A8A] text-xs">
-            &copy; 2026 Countrie Hoodlums. All rights reserved.
+            &copy; 2026 Hoodlums Country Club. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
             {/* Payment method icon placeholders */}

@@ -60,7 +60,7 @@ export default function Header() {
                 href="/"
                 className="font-display text-lg sm:text-xl font-bold uppercase tracking-wide text-foreground hover:text-accent transition-colors"
               >
-                Countrie Hoodlums
+                Hoodlums Country Club
               </Link>
             </div>
 

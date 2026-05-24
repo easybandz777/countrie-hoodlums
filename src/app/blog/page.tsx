@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import BlogContent from "./blog-content";
 
 export const metadata: Metadata = {
-  title: "Blog | Countrie Hoodlums",
+  title: "Blog | Hoodlums Country Club",
   description:
-    "Stories, drops, and the real behind the Countrie Hoodlums brand.",
+    "Stories, drops, and the real behind the Hoodlums Country Club brand.",
 };
 
 export default function BlogPage() {

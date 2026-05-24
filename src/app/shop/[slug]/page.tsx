@@ -32,14 +32,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
 
   if (!product) {
-    return { title: "Product Not Found | Countrie Hoodlums" };
+    return { title: "Product Not Found | Hoodlums Country Club" };
   }
 
   return {
-    title: `${product.name} | Countrie Hoodlums`,
+    title: `${product.name} | Hoodlums Country Club`,
     description: product.description,
     openGraph: {
-      title: `${product.name} | Countrie Hoodlums`,
+      title: `${product.name} | Hoodlums Country Club`,
       description: product.description,
       type: "website",
     },
@@ -91,7 +91,7 @@ export default async function ProductPage({ params }: Props) {
             <li>Preshrunk and garment-dyed</li>
             <li>Ribbed crew neck collar</li>
             <li>Double-needle stitching on sleeves and hem</li>
-            <li>Countrie Hoodlums woven label at hem</li>
+            <li>Hoodlums Country Club woven label at hem</li>
           </ul>
         </AccordionSection>
 

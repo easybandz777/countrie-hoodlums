@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shipping Policy | Countrie Hoodlums",
+  title: "Shipping Policy | Hoodlums Country Club",
   description:
-    "Learn about Countrie Hoodlums shipping times, rates, and delivery options.",
+    "Learn about Hoodlums Country Club shipping times, rates, and delivery options.",
 };
 
 export default function ShippingPolicyPage() {
@@ -55,10 +55,10 @@ export default function ShippingPolicyPage() {
         If you have any questions about shipping or need help with your order,
         reach out to us at{" "}
         <a
-          href="mailto:support@thecountriehoodlums.com"
+          href="mailto:support@thehoodlumscountryclub.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          support@thecountriehoodlums.com
+          support@thehoodlumscountryclub.com
         </a>
         .
       </p>

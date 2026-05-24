@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Size Guide | Countrie Hoodlums",
+  title: "Size Guide | Hoodlums Country Club",
   description:
-    "Find your perfect fit with the Countrie Hoodlums size guide. Measurements for tees, hoodies, and hats.",
+    "Find your perfect fit with the Hoodlums Country Club size guide. Measurements for tees, hoodies, and hats.",
   openGraph: {
-    title: "Size Guide | Countrie Hoodlums",
+    title: "Size Guide | Hoodlums Country Club",
     description:
-      "Find your perfect fit with the Countrie Hoodlums size guide. Measurements for tees, hoodies, and hats.",
+      "Find your perfect fit with the Hoodlums Country Club size guide. Measurements for tees, hoodies, and hats.",
   },
 };
 

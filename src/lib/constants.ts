@@ -1,16 +1,15 @@
 export const SITE_CONFIG = {
-  name: "Countrie Hoodlums",
+  name: "Hoodlums Country Club",
+  shortName: "HCC",
+  tagline: "Bad Decisions · Good Times",
   description:
-    "Premium streetwear rooted in culture. Rep where you come from with gear that speaks for itself.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://thecountriehoodlums.com",
+    "Hoodlums Country Club — country grit, hood soul, zero apologies. Premium merch for the ones who live each day like it's their last.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://thehoodlumscountryclub.com",
   socials: {
-    instagram: "https://instagram.com/countriehoodlums",
-    tiktok: "https://tiktok.com/@countriehoodlums",
-    youtube: "https://youtube.com/@countriehoodlums",
-    facebook: "https://facebook.com/countriehoodlums",
+    facebook: "https://facebook.com/people/Countrie-Hoodlums/61585880894365/",
   },
   freeShippingThreshold: 75,
-  email: "info@thecountriehoodlums.com",
+  email: "info@thehoodlumscountryclub.com",
 } as const;
 
 export const NAV_LINKS = [

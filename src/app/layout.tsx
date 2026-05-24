@@ -20,14 +20,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Countrie Hoodlums | Authentic Hood Culture Merch",
+  title: "Hoodlums Country Club | Bad Decisions · Good Times",
   description:
-    "Buy official Countrie Hoodlums merch — tees, hoodies, hats, and more. Authentic hood culture meets country comedy.",
+    "Official Hoodlums Country Club merch — tees, hoodies, hats. Country grit, hood soul, zero apologies. HCC.",
   openGraph: {
-    siteName: "Countrie Hoodlums",
-    title: "Countrie Hoodlums | Authentic Hood Culture Merch",
+    siteName: "Hoodlums Country Club",
+    title: "Hoodlums Country Club | Bad Decisions · Good Times",
     description:
-      "Buy official Countrie Hoodlums merch — tees, hoodies, hats, and more. Authentic hood culture meets country comedy.",
+      "Official Hoodlums Country Club merch — tees, hoodies, hats. Country grit, hood soul, zero apologies. HCC.",
     type: "website",
   },
 };

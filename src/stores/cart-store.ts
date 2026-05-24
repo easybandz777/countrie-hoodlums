@@ -79,7 +79,7 @@ export const useCartStore = create<CartStore>()(
         get().items.reduce((sum, i) => sum + i.price * i.quantity, 0),
     }),
     {
-      name: "countrie-hoodlums-cart",
+      name: "hcc-cart",
       partialize: (state) => ({ items: state.items }),
     }
   )

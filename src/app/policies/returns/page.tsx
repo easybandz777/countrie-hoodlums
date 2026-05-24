@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Return & Exchange Policy | Countrie Hoodlums",
+  title: "Return & Exchange Policy | Hoodlums Country Club",
   description:
-    "Our 30-day return and exchange policy for Countrie Hoodlums merchandise.",
+    "Our 30-day return and exchange policy for Hoodlums Country Club merchandise.",
 };
 
 export default function ReturnsPolicyPage() {
@@ -59,10 +59,10 @@ export default function ReturnsPolicyPage() {
       <p>
         To start a return or exchange, email us at{" "}
         <a
-          href="mailto:support@thecountriehoodlums.com"
+          href="mailto:support@thehoodlumscountryclub.com"
           className="text-[#C8A84B] underline hover:text-white transition-colors"
         >
-          support@thecountriehoodlums.com
+          support@thehoodlumscountryclub.com
         </a>{" "}
         with your order number and the reason for the return. We&apos;ll get
         back to you with instructions within 1-2 business days.

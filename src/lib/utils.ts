@@ -21,7 +21,7 @@ export function formatPrice(price: number): string {
 
 /**
  * Converts text to a URL-safe slug.
- * e.g. "Countrie Hoodlums Tee" -> "countrie-hoodlums-tee"
+ * e.g. "Hoodlums Country Club Tee" -> "hoodlums-country-club-tee"
  */
 export function slugify(text: string): string {
   return text

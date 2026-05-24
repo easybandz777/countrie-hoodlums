@@ -224,10 +224,10 @@ export default function ContactPage() {
               </h3>
             </div>
             <a
-              href="mailto:info@thecountriehoodlums.com"
+              href="mailto:info@thehoodlumscountryclub.com"
               className="text-muted-foreground hover:text-gold transition-colors text-sm"
             >
-              info@thecountriehoodlums.com
+              info@thehoodlumscountryclub.com
             </a>
           </div>
 
@@ -243,16 +243,16 @@ export default function ContactPage() {
             </div>
             <div className="space-y-2">
               <a
-                href="https://instagram.com/countriehoodlums"
+                href="https://instagram.com/hoodlumscountryclub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors text-sm"
               >
                 <ExternalLink className="w-4 h-4" />
-                @countriehoodlums
+                @hoodlumscountryclub
               </a>
               <a
-                href="https://tiktok.com/@countriehoodlums"
+                href="https://tiktok.com/@hoodlumscountryclub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors text-sm"
@@ -280,12 +280,12 @@ export default function ContactPage() {
             <p className="text-sm text-gold-light leading-relaxed">
               For urgent order issues, DM us on Instagram{" "}
               <a
-                href="https://instagram.com/countriehoodlums"
+                href="https://instagram.com/hoodlumscountryclub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold underline underline-offset-2 hover:text-gold"
               >
-                @countriehoodlums
+                @hoodlumscountryclub
               </a>
             </p>
           </div>

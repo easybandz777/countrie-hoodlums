@@ -11,7 +11,7 @@ function getResend() {
 
 const resend = getResend();
 
-const FROM_ADDRESS = "Countrie Hoodlums <noreply@thecountriehoodlums.com>";
+const FROM_ADDRESS = "Hoodlums Country Club <noreply@thehoodlumscountryclub.com>";
 
 type EmailResult = { success: true } | { success: false; error: string };
 
@@ -20,14 +20,14 @@ export async function sendWelcomeEmail(email: string): Promise<EmailResult> {
     await resend.emails.send({
       from: FROM_ADDRESS,
       to: email,
-      subject: "Welcome to the Countrie Hoodlums fam!",
+      subject: "Welcome to the Hoodlums Country Club fam!",
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="text-align: center;">Welcome to Countrie Hoodlums</h1>
+          <h1 style="text-align: center;">Welcome to Hoodlums Country Club</h1>
           <p>You're officially part of the family now.</p>
           <p>Get ready for exclusive drops, early access to new gear, and updates straight from the crew.</p>
           <p>Stay tuned &mdash; big things are coming.</p>
-          <p style="margin-top: 2rem;">&mdash; Countrie Hoodlums Team</p>
+          <p style="margin-top: 2rem;">&mdash; Hoodlums Country Club Team</p>
         </div>
       `,
     });
@@ -55,7 +55,7 @@ export async function sendOrderConfirmation(
           <p><strong>Order Number:</strong> ${orderDetails.orderNumber ?? "N/A"}</p>
           <p><strong>Total:</strong> $${orderDetails.total ?? "0.00"}</p>
           <p>We'll send you a shipping notification once your order is on the way.</p>
-          <p style="margin-top: 2rem;">&mdash; Countrie Hoodlums Team</p>
+          <p style="margin-top: 2rem;">&mdash; Hoodlums Country Club Team</p>
         </div>
       `,
     });
@@ -82,7 +82,7 @@ export async function sendShippingNotification(
           <p>Great news &mdash; your gear is on the way!</p>
           <p><strong>Tracking Number:</strong> ${trackingNumber}</p>
           <p>You can track your package using the number above with your carrier.</p>
-          <p style="margin-top: 2rem;">&mdash; Countrie Hoodlums Team</p>
+          <p style="margin-top: 2rem;">&mdash; Hoodlums Country Club Team</p>
         </div>
       `,
     });

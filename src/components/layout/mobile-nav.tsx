@@ -12,10 +12,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { href: "https://instagram.com/countriehoodlums", label: "Instagram" },
-  { href: "https://tiktok.com/@countriehoodlums", label: "TikTok" },
-  { href: "https://youtube.com/@countriehoodlums", label: "YouTube" },
-  { href: "https://facebook.com/countriehoodlums", label: "Facebook" },
+  { href: "https://instagram.com/hoodlumscountryclub", label: "Instagram" },
+  { href: "https://tiktok.com/@hoodlumscountryclub", label: "TikTok" },
+  { href: "https://youtube.com/@hoodlumscountryclub", label: "YouTube" },
+  { href: "https://facebook.com/hoodlumscountryclub", label: "Facebook" },
 ];
 
 interface MobileNavProps {

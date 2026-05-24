@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/checkout/", "/cart"],
       },
     ],
-    sitemap: "https://thecountriehoodlums.com/sitemap.xml",
+    sitemap: "https://thehoodlumscountryclub.com/sitemap.xml",
   };
 }

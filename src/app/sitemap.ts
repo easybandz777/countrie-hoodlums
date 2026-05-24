@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { MOCK_PRODUCTS } from "@/lib/mock-data";
 import { MOCK_POSTS } from "@/lib/mock-blog";
 
-const BASE_URL = "https://thecountriehoodlums.com";
+const BASE_URL = "https://thehoodlumscountryclub.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
