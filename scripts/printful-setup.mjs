@@ -283,9 +283,11 @@ async function patchMockData({ slug, imageRelPath, variantIdsBySize }) {
     `(slug:\\s*"${slug}"[\\s\\S]*?)(image:\\s*")[^"]+(",)`
   );
   src = src.replace(blockRe, `$1$2${imageRelPath}$3`);
-  // Replace or insert printfulVariantIds in the matching block
+  // Replace or insert printfulVariantIds in the matching block.
+  // Anchor m[3] to the product's CLOSING brace (2-space indent), not nested
+  // braces — otherwise re-runs duplicate the variant ID block.
   const productBlockRe = new RegExp(
-    `(slug:\\s*"${slug}"[\\s\\S]*?printfulColor:\\s*"[^"]+",)([\\s\\S]*?)(\\n\\s*\\},)`
+    `(slug:\\s*"${slug}"[\\s\\S]*?printfulColor:\\s*"[^"]+",)([\\s\\S]*?)(\\n  \\},)`
   );
   const m = src.match(productBlockRe);
   if (!m) {
@@ -295,7 +297,11 @@ async function patchMockData({ slug, imageRelPath, variantIdsBySize }) {
       .map(([s, id]) => `      ${JSON.stringify(s)}: ${id}`)
       .join(",\n");
     const newField = `\n    printfulVariantIds: {\n${ids},\n    },`;
-    const cleaned = m[2].replace(/\n\s*printfulVariantIds:[\s\S]*?\},/, "");
+    // Strip any existing printfulVariantIds block (including its closing brace).
+    const cleaned = m[2].replace(
+      /\n    printfulVariantIds:\s*\{[\s\S]*?\n    \},/g,
+      ""
+    );
     src = src.replace(productBlockRe, `${m[1]}${cleaned}${newField}${m[3]}`);
   }
   await fs.writeFile(file, src);
