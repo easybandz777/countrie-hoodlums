@@ -137,6 +137,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Tailgate down, sun going, phone off. 250 made. That's it.",
     printfulProductId: 515,
     fulfillmentPath: "off-platform",
+    previewImage: "/artwork/capsule-01/piece-03-back.png",
+    previewIsProductMockup: false,
   },
   {
     number: "4",
@@ -193,6 +195,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "If you know, you know. 200 made. That's it.",
     printfulProductId: 975,
     fulfillmentPath: "off-platform",
+    previewImage: "/images/products/capsule-01/piece-06-quiet-hoodlum.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "7",
@@ -247,6 +251,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Class of '24. Bonfire Hill forever.",
     printfulProductId: 318,
     fulfillmentPath: "off-platform",
+    previewImage: "/images/products/capsule-01/piece-09-homecoming-24.jpg",
+    previewIsProductMockup: true,
   },
 ];
 

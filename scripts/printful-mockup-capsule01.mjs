@@ -61,11 +61,34 @@ const PIECES = [
     catalogProductId: 542,
     variantId: 13665, // Independent PRM4500 Pigment Black, L
     placement: "embroidery_chest_center",
-    // PRM4500 on Printful is embroidery-only; back placement not available.
-    // For the coming-soon page mockup, render the shield as a large chest
-    // embroidery preview. Real production will go off-platform to a screenprint
-    // partner for the true 12"x14" back placement.
     label: "Order of the Hoodlum FLAGSHIP Hoodie (PRM4500 Black, chest embroidery preview)",
+  },
+  {
+    number: 3,
+    slug: "piece-03-last-light",
+    artworkFile: "piece-03-back.png",
+    catalogProductId: 515,
+    variantId: 12959, // Shaka SHHTDS Black/White tie-dye, L
+    placement: "back",
+    label: "Last Light Tie-Dye Tee (Shaka SHHTDS B/W tie-dye, back landscape)",
+  },
+  {
+    number: 6,
+    slug: "piece-06-quiet-hoodlum",
+    artworkFile: "piece-06-front.png",
+    catalogProductId: 975,
+    variantId: 34366, // Lane Seven LS16001GD Pigment Burro, L
+    placement: "front",
+    label: "Quiet Hoodlum Oversized Hoodie (LS16001GD Pigment Burro, chest icon)",
+  },
+  {
+    number: 9,
+    slug: "piece-09-homecoming-24",
+    artworkFile: "piece-09-front.png",
+    catalogProductId: 318,
+    variantId: 9661, // Champion S149 Black, L
+    placement: "front",
+    label: "Homecoming '24 Crew (Champion S149 Black, tackle-twill 24 front)",
   },
 ];
 
