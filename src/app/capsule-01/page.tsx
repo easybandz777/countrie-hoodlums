@@ -373,9 +373,34 @@ function PieceCard({ piece }: { piece: (typeof CAPSULE_01_PIECES)[number] }) {
       style={{ backgroundColor: isFlagship ? "#141008" : "#0D0D0D" }}
     >
       {isFlagship && (
-        <span className="absolute -top-3 left-6 bg-accent text-black font-display text-[10px] font-bold uppercase tracking-[0.25em] px-2 py-1 rounded">
+        <span className="absolute -top-3 left-6 bg-accent text-black font-display text-[10px] font-bold uppercase tracking-[0.25em] px-2 py-1 rounded z-10">
           Flagship
         </span>
+      )}
+
+      {piece.previewImage && (
+        <div
+          className="relative -mx-6 -mt-6 mb-5 aspect-square overflow-hidden rounded-t-lg"
+          style={{
+            backgroundColor: piece.previewIsProductMockup ? "#1A1A1A" : "#F5F0E1",
+          }}
+        >
+          {/* Use plain img — local /public assets, no need for next/image optimization */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={piece.previewImage}
+            alt={`${piece.conceptName} — ${piece.previewIsProductMockup ? "product mockup" : "design artwork"}`}
+            loading="lazy"
+            className={`absolute inset-0 w-full h-full ${
+              piece.previewIsProductMockup ? "object-cover" : "object-contain p-6"
+            }`}
+          />
+          {!piece.previewIsProductMockup && (
+            <span className="absolute bottom-2 right-2 bg-black/80 text-accent font-display text-[9px] uppercase tracking-[0.3em] px-2 py-1 rounded">
+              Design preview
+            </span>
+          )}
+        </div>
       )}
 
       <div className="flex items-center justify-between mb-4">

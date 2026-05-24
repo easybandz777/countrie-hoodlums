@@ -39,6 +39,10 @@ export interface CapsulePiece {
   printfulProductId?: number;
   /** Whether this piece routes through Printful (Path B) or off-platform (Path C). */
   fulfillmentPath: "printful-with-finishing" | "off-platform";
+  /** Mockup or artwork image path under /public. Render as preview if present. */
+  previewImage?: string;
+  /** True = real Printful product mockup; false = raw artwork on transparent/white. */
+  previewIsProductMockup?: boolean;
 }
 
 export const CAPSULE_01_PIECES: CapsulePiece[] = [
@@ -93,6 +97,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Every member gets a number. Yours is 001. So is everyone else's. That's the joke. That's the point.",
     printfulProductId: 586,
     fulfillmentPath: "printful-with-finishing",
+    previewImage: "/images/products/capsule-01/piece-01-member-001.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "2",
@@ -111,6 +117,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Patron saint of bad decisions, hand-numbered to 100. If you have to ask which one's yours, it isn't.",
     printfulProductId: 713,
     fulfillmentPath: "off-platform",
+    previewImage: "/images/products/capsule-01/piece-02-patron-saint.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "3",
@@ -147,6 +155,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Only 200 get inducted. The rest just hear about it.",
     printfulProductId: 542,
     fulfillmentPath: "off-platform",
+    previewImage: "/artwork/capsule-01/piece-04-back.png",
+    previewIsProductMockup: false,
   },
   {
     number: "5",
