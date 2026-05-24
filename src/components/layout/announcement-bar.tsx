@@ -59,17 +59,17 @@ export default function AnnouncementBar() {
 function MarqueeContent() {
   return (
     <span className="inline-flex items-center gap-8 px-4 text-xs font-semibold uppercase tracking-wider text-black">
-      <span>Free Shipping on Orders $75+</span>
+      <span>CAPSULE 01 — Dirt Road Heirlooms / Vol. 01 — Coming Soon</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
-      <span>New Drop Coming Soon</span>
-      <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
-      <span>Hoodlums Country Club</span>
+      <span>Hand-Numbered. No Restocks Ever.</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
       <span>Free Shipping on Orders $75+</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
-      <span>New Drop Coming Soon</span>
+      <span>CAPSULE 01 — Dirt Road Heirlooms / Vol. 01 — Coming Soon</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
-      <span>Hoodlums Country Club</span>
+      <span>Hand-Numbered. No Restocks Ever.</span>
+      <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
+      <span>Free Shipping on Orders $75+</span>
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
     </span>
   );

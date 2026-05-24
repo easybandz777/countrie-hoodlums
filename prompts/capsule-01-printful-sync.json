@@ -1,0 +1,259 @@
+{
+  "capsule": "DIRT ROAD HEIRLOOMS / VOL. 01",
+  "generated": "2026-05-24",
+  "store_id": 18220663,
+  "notes": [
+    "These specs are READY TO PUSH via Printful's sync_product API endpoint as soon as artwork PNG files exist for each piece.",
+    "Path B pieces (printful-with-finishing) are routed through Printful for blank + main print, then sent to in-house station for hand-stamping + numbered neck label + hangtag.",
+    "Path C pieces (off-platform) cannot be produced via Printful due to: discharge print requirements, tackle-twill, bullion embroidery, hood-top print placement, or side-seam label installation. Route to LA Apparel / SOS From Texas / specialty screenprinter.",
+    "All retail prices and edition caps reflect the reconciled final plan after pricing pressure-test + design QA pass.",
+    "Variant IDs verified live against Printful catalog API on 2026-05-24."
+  ],
+  "pieces": [
+    {
+      "number": "1",
+      "concept_name": "Member Number 001",
+      "type": "tee",
+      "wave": "I",
+      "retail": 78,
+      "cap": 700,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Discharge print + gold metallic + non-standard hem placement",
+      "printful_product_id": 586,
+      "printful_blank": "Comfort Colors 1717 Garment-Dyed Heavyweight Tee",
+      "colorway": "Pepper",
+      "techniques_required": ["discharge print", "spot gold overprint", "lower-left hem placement"],
+      "variants": [
+        { "size": "S", "variant_id": 17693, "cost": 15.29 },
+        { "size": "M", "variant_id": 17694, "cost": 15.29 },
+        { "size": "L", "variant_id": 17695, "cost": 15.29 },
+        { "size": "XL", "variant_id": 17696, "cost": 15.29 },
+        { "size": "2XL", "variant_id": 17697, "cost": 17.29 },
+        { "size": "3XL", "variant_id": 17698, "cost": 19.29 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "lower-left hem", "size_in": "3.25 x 1.1", "filename": "member-001-hem-front.png" },
+        { "placement": "back upper", "size_in": "12 x 14.5", "filename": "member-001-charter-back.png" }
+      ]
+    },
+    {
+      "number": "2",
+      "concept_name": "Patron Saint of Bad Decisions",
+      "type": "tee",
+      "wave": "II",
+      "retail": 88,
+      "cap": 100,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Discharge + 3-pass spot screenprint + metallic gold halo (DTG cannot replicate)",
+      "printful_product_id": 713,
+      "printful_blank": "AS Colour 5082 Men's Oversized Faded Tee",
+      "colorway": "Faded Bone",
+      "techniques_required": ["discharge base", "3-pass spot screenprint", "metallic gold ink", "50-washes distress overlay", "nape woven-label-style print"],
+      "variants": [
+        { "size": "S", "variant_id": 17570, "cost": 25.95 },
+        { "size": "M", "variant_id": 17575, "cost": 25.95 },
+        { "size": "L", "variant_id": 17580, "cost": 25.95 },
+        { "size": "XL", "variant_id": 17585, "cost": 25.95 },
+        { "size": "2XL", "variant_id": 17590, "cost": 27.95 },
+        { "size": "3XL", "variant_id": 17595, "cost": 29.95 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "front chest", "size_in": "11 x 13.5", "filename": "patron-saint-santo-front.png" },
+        { "placement": "back nape", "size_in": "2.5 x 1.25", "filename": "patron-saint-label-back.png" }
+      ]
+    },
+    {
+      "number": "3",
+      "concept_name": "Last Light, County Line",
+      "type": "tee",
+      "wave": "I",
+      "retail": 84,
+      "cap": 250,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Direct-discharge into tie-dye base (Printful DTG over tie-dye creates white-underbase halo killing the cinematic intent)",
+      "printful_product_id": 515,
+      "printful_blank": "Shaka Wear SHHTDS Heavyweight Tie-Dye Tee",
+      "colorway": "Black / White (custom dye to Bonfire Black + Creek Cream preferred — not stock white)",
+      "techniques_required": ["discharge print on tie-dye", "direct-into-fabric integration", "custom dye recipe spec"],
+      "variants": [
+        { "size": "S", "variant_id": 12956, "cost": 19.33 },
+        { "size": "M", "variant_id": 12957, "cost": 19.33 },
+        { "size": "L", "variant_id": 12959, "cost": 19.33 },
+        { "size": "XL", "variant_id": 12960, "cost": 19.33 },
+        { "size": "2XL", "variant_id": 12961, "cost": 21.33 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "left chest", "size_in": "1.75 x 0.4", "filename": "last-light-tag-front.png" },
+        { "placement": "back full panel", "size_in": "15 x 17", "filename": "last-light-landscape-back.png" }
+      ]
+    },
+    {
+      "number": "4",
+      "concept_name": "Order of the Hoodlum",
+      "type": "hoodie",
+      "wave": "II",
+      "retail": 248,
+      "cap": 200,
+      "is_flagship": true,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Chest embroidery (chain-stitch detail Printful doesn't support) + 4-color discharge back print + hand-numbered + side-seam label",
+      "printful_product_id": 542,
+      "printful_blank": "Independent Trading Co. PRM4500 Pigment-Dyed Heavyweight Hoodie",
+      "colorway": "Pigment Black",
+      "techniques_required": ["flat satin embroidery", "chain-stitch outline", "4-color discharge screenprint", "halftone distress", "hand-numbered NO. ___ OF 200"],
+      "variants": [
+        { "size": "S", "variant_id": 13663, "cost": 45.90 },
+        { "size": "M", "variant_id": 13664, "cost": 45.90 },
+        { "size": "L", "variant_id": 13665, "cost": 45.90 },
+        { "size": "XL", "variant_id": 13666, "cost": 45.90 },
+        { "size": "2XL", "variant_id": 13667, "cost": 47.90 },
+        { "size": "3XL", "variant_id": 13668, "cost": 49.90 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "left chest embroidery", "size_in": "3.25 x 3.5", "filename": "order-medallion-chest.png" },
+        { "placement": "back upper", "size_in": "12 x 14", "filename": "order-shield-back.png" }
+      ]
+    },
+    {
+      "number": "5",
+      "concept_name": "HOODLUMS ONLY",
+      "type": "hoodie",
+      "wave": "I",
+      "retail": 148,
+      "cap": 600,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Hood-top print placement requires un-assembled panel screenprinting — Printful cannot accommodate hood crown in DTG jig",
+      "printful_product_id": 970,
+      "printful_blank": "Comfort Colors 1567 Garment-Dyed Hooded Sweatshirt",
+      "colorway": "Pepper",
+      "techniques_required": ["water-based discharge", "hood-top print (4\" tall lettering across crown)", "chest crest discharge", "pre-construction panel printing OR specialty hand-screen"],
+      "variants": [
+        { "size": "S", "variant_id": 24850, "cost": 39.95 },
+        { "size": "M", "variant_id": 24851, "cost": 39.95 },
+        { "size": "L", "variant_id": 24852, "cost": 39.95 },
+        { "size": "XL", "variant_id": 24853, "cost": 39.95 },
+        { "size": "2XL", "variant_id": 24854, "cost": 41.95 },
+        { "size": "3XL", "variant_id": 24855, "cost": 43.95 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "hood top crown", "size_in": "11 x 4", "filename": "hoodlums-only-hood.png" },
+        { "placement": "left chest", "size_in": "2.25 x 2", "filename": "hoodlums-only-chest.png" }
+      ]
+    },
+    {
+      "number": "6",
+      "concept_name": "The Quiet Hoodlum",
+      "type": "hoodie",
+      "wave": "II",
+      "retail": 168,
+      "cap": 200,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Bullion-stitch embroidery (Printful supports flat satin + 3D puff only) + 9pt micro hem embroidery (below Printful minimum 14pt) + hem placement near side seam",
+      "printful_product_id": 975,
+      "printful_blank": "Lane Seven LS16001GD Urban Garment-Dyed Oversized Hoodie",
+      "colorway": "Pigment Burro (Bonfire Black not available on this blank)",
+      "techniques_required": ["bullion-stitch embroidery", "satin-stitch fill", "flat-stitch outline", "micro 9pt flat-stitch hem", "tonal threads"],
+      "variants": [
+        { "size": "S", "variant_id": 34360, "cost": 35.95 },
+        { "size": "M", "variant_id": 34363, "cost": 35.95 },
+        { "size": "L", "variant_id": 34366, "cost": 35.95 },
+        { "size": "XL", "variant_id": 34369, "cost": 35.95 },
+        { "size": "2XL", "variant_id": 34372, "cost": 37.95 },
+        { "size": "3XL", "variant_id": 34375, "cost": 39.95 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "chest center embroidery", "size_in": "1.5 x 1.75", "filename": "quiet-hoodlum-icon.png" },
+        { "placement": "front hem near left side seam", "size_in": "4.5 x 0.3", "filename": "quiet-hoodlum-hem.png" }
+      ]
+    },
+    {
+      "number": "7",
+      "concept_name": "Chapter 01 Pocket Crest",
+      "type": "crew",
+      "wave": "I",
+      "retail": 118,
+      "cap": 500,
+      "fulfillment_path": "printful-with-finishing",
+      "fulfillment_reason": "Off-center right chest placement supported via Printful custom placement (~$3/unit setup) + nape strip via custom neck label area. Hand-stamping handled in-house post-Printful.",
+      "printful_product_id": 839,
+      "printful_blank": "Comfort Colors 1566 Garment-Dyed Crewneck",
+      "colorway": "Pepper",
+      "techniques_required": ["discharge print (substitute DTG with soft-hand setting)", "gold plastisol overprint on monogram", "off-center right chest placement"],
+      "variants": [
+        { "size": "S", "variant_id": 21980, "cost": 29.99 },
+        { "size": "M", "variant_id": 21981, "cost": 29.99 },
+        { "size": "L", "variant_id": 21982, "cost": 29.99 },
+        { "size": "XL", "variant_id": 21983, "cost": 29.99 },
+        { "size": "2XL", "variant_id": 21984, "cost": 31.99 },
+        { "size": "3XL", "variant_id": 21985, "cost": 33.99 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "right chest off-center (4.5\" right of vertical centerline)", "size_in": "4 x 5.5", "filename": "chapter-01-crest-front.png" },
+        { "placement": "back nape strip", "size_in": "3.25 x 0.75", "filename": "chapter-01-nape-back.png" }
+      ]
+    },
+    {
+      "number": "8",
+      "concept_name": "Club Issue No. 24",
+      "type": "hoodie",
+      "wave": "II",
+      "retail": 218,
+      "cap": 150,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Tonal embroidery on tie-dye requires per-unit thread color matching not supported by Printful's stock Madeira library + custom inside-collar woven label",
+      "printful_product_id": 464,
+      "printful_blank": "Champion GDS101 Reverse Weave Tie-Dye Hoodie",
+      "colorway": "Black (Storm tie-dye spec — closest available)",
+      "techniques_required": ["tonal flat embroidery (0.4mm density)", "satin-stitch border ring (1mm raised lip)", "bronze + charcoal threads matched to dominant tie-dye zones"],
+      "variants": [
+        { "size": "S", "variant_id": 11986, "cost": 63.12 },
+        { "size": "M", "variant_id": 11987, "cost": 63.12 },
+        { "size": "L", "variant_id": 11988, "cost": 63.12 },
+        { "size": "XL", "variant_id": 11989, "cost": 63.12 },
+        { "size": "2XL", "variant_id": 11990, "cost": 65.12 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "left chest embroidery", "size_in": "3.25 x 3.25", "filename": "club-issue-medallion.png" }
+      ]
+    },
+    {
+      "number": "9",
+      "concept_name": "Class of '24 — Homecoming Crew",
+      "type": "crew",
+      "wave": "I",
+      "retail": 148,
+      "cap": 500,
+      "fulfillment_path": "off-platform",
+      "fulfillment_reason": "Tackle-twill (wool felt applique) not supported by Printful — requires varsity specialist (Stahls' or local letterman shop)",
+      "printful_product_id": 318,
+      "printful_blank": "Champion S149 Reverse Weave Crewneck",
+      "colorway": "Black (forest green / olive not available on this blank via Printful)",
+      "techniques_required": ["tackle-twill (cream wool felt 24)", "chain-stitch outline (gold)", "drop shadow (Tobacco Olive)", "arched chain-stitch lettering", "discharge back print"],
+      "variants": [
+        { "size": "S", "variant_id": 9659, "cost": 50.76 },
+        { "size": "M", "variant_id": 9660, "cost": 50.76 },
+        { "size": "L", "variant_id": 9661, "cost": 50.76 },
+        { "size": "XL", "variant_id": 9662, "cost": 50.76 },
+        { "size": "2XL", "variant_id": 9663, "cost": 52.76 }
+      ],
+      "artwork_files_needed": [
+        { "placement": "front center chest", "size_in": "7 x 8.5", "filename": "homecoming-24-front.png" },
+        { "placement": "back upper", "size_in": "5 x 3.25", "filename": "homecoming-alumni-back.png" }
+      ]
+    }
+  ],
+  "fulfillment_path_summary": {
+    "printful_with_finishing_count": 1,
+    "off_platform_count": 8,
+    "off_platform_pieces": [1, 2, 3, 4, 5, 6, 8, 9],
+    "recommendation": "Per Production Feasibility agent: hybrid path — only Piece 7 (Chapter 01 Pocket Crest) survives on Printful with smart compromises. All other pieces require off-platform production (LA Apparel for cut-and-sew premium pieces with side-seam labels, specialty screenprinter for discharge work, varsity shop for tackle-twill, hand-embroidery house for bullion)."
+  },
+  "hand_stamping_workflow": {
+    "tool": "Reiner B6K six-band numbering machine (~$180 each, need 2)",
+    "ink_neck_label": "VersaCraft Real Gold pigment ink (heat-set at 320°F for 15 sec)",
+    "ink_hangtag": "StazOn Pigment Gold (paper-permanent, no heat needed)",
+    "qc_step": "Two-person verification + photo of every numbered garment before shipping label prints",
+    "labor_estimate": "~4 min per piece, ~13 hours total for the 200-unit flagship",
+    "alternative": "ShipMonk Texas kitting service ($0.85/piece labor)"
+  }
+}
