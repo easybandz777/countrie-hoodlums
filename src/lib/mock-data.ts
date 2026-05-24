@@ -296,7 +296,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Limited drop. Garment-dyed heavyweight black tee (Comfort Colors 1717). Hooded figure in a Guy Fawkes mask in front of a wall of matrix-green code monitors — with a tiny gold HCC monogram tucked in the corner. If you know, you know.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-anonymous-hoodlum.webp",
+    image: "/images/products/printful/tee-anonymous-hoodlum.jpg",
     cartoonImage: "/images/products/tee-anonymous-hoodlum.webp",
     printfulProductId: 586,
     printfulColor: "Black",
@@ -314,7 +314,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Heritage country-club crest. Crossed driver and putter with a golf ball at the intersection, HOODLUMS COUNTRY CLUB arched on top, EST. 2024 below. Garment-dyed heavyweight black tee (Comfort Colors 1717).",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-golf-crossed-clubs.webp",
+    image: "/images/products/printful/tee-golf-crossed-clubs.jpg",
     cartoonImage: "/images/products/tee-golf-crossed-clubs.webp",
     printfulProductId: 586,
     printfulColor: "Black",
@@ -330,7 +330,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "The HCC skull-cowboy mascot mid-swing — cowboy hat, gold grillz, three clay-red flags planted in the turf. BAD LIES · GOOD TIMES arched below. Garment-dyed heavyweight black tee (Comfort Colors 1717).",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-golf-skull-caddy.webp",
+    image: "/images/products/printful/tee-golf-skull-caddy.jpg",
     cartoonImage: "/images/products/tee-golf-skull-caddy.webp",
     printfulProductId: 586,
     printfulColor: "Black",
@@ -346,7 +346,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Massive stacked condensed Western type — BAD LIES over GOOD TIMES in cream with a thick antique-gold metallic outline. Tiny clay-red flag in the corner. Garment-dyed heavyweight black tee (Comfort Colors 1717).",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-golf-bad-lies.webp",
+    image: "/images/products/printful/tee-golf-bad-lies.jpg",
     cartoonImage: "/images/products/tee-golf-bad-lies.webp",
     printfulProductId: 586,
     printfulColor: "Black",
@@ -362,7 +362,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Single clay-red flag planted on turf green, HOODLUMS COUNTRY CLUB stitched on the flag, a small bone-cream ball at the cup. EST. 2024 · 18 HOLES in gold below. Garment-dyed heavyweight black tee (Comfort Colors 1717).",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-golf-18th-hole.webp",
+    image: "/images/products/printful/tee-golf-18th-hole.jpg",
     cartoonImage: "/images/products/tee-golf-18th-hole.webp",
     printfulProductId: 586,
     printfulColor: "Black",
@@ -378,7 +378,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Vintage country-club oval emblem — skull-cowboy mascot, crossed clubs, EST. 2024, all wrapped by HOODLUMS COUNTRY CLUB on the outer ring. Garment-dyed heavyweight black tee (Comfort Colors 1717).",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-golf-emblem.webp",
+    image: "/images/products/printful/tee-golf-emblem.jpg",
     cartoonImage: "/images/products/tee-golf-emblem.webp",
     printfulProductId: 586,
     printfulColor: "Black",
@@ -408,7 +408,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Parchment-cream scorecard graphic — 18-hole grid, HCC arched on top, BAD DECISIONS · GOOD TIMES along the bottom. Garment-dyed heavyweight black tee (Comfort Colors 1717).",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-golf-scorecard.webp",
+    image: "/images/products/printful/tee-golf-scorecard.jpg",
     cartoonImage: "/images/products/tee-golf-scorecard.webp",
     printfulProductId: 586,
     printfulColor: "Black",
@@ -424,7 +424,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Skull-cowboy mascot driving a golf cart, kicking up dust on the cart path. HOODLUMS COUNTRY CLUB top arc, BAD DECISIONS · GOOD TIMES bottom. Garment-dyed heavyweight black tee (Comfort Colors 1717).",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-golf-cart-bandits.webp",
+    image: "/images/products/printful/tee-golf-cart-bandits.jpg",
     cartoonImage: "/images/products/tee-golf-cart-bandits.webp",
     printfulProductId: 586,
     printfulColor: "Black",
