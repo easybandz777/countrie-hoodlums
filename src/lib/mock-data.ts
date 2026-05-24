@@ -26,12 +26,21 @@ export const MOCK_PRODUCTS: Product[] = [
     isNew: true,
     isSoldOut: false,
     description:
-      "Super-heavyweight black pullover (Lane Seven LS17001). Gold HOODLUMS COUNTRY CLUB lettering with the skull-cowboy mascot — the flagship hoodie.",
+      "Heavyweight black pullover (Independent IND4000). Gold HOODLUMS COUNTRY CLUB lettering with the skull-cowboy mascot — the flagship hoodie.",
     sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
-    image: "/images/products/hoodie-heritage.webp",
+    image: "/images/products/printful/hoodie-heritage.jpg",
     cartoonImage: "/images/products/hoodie-heritage-cartoon.webp",
-    printfulProductId: 1540,
+    printfulProductId: 1543,
     printfulColor: "Black",
+    printfulVariantIds: {
+      "2XL": 5324352159,
+      "3XL": 5324352160,
+      "L": 5324352161,
+      "M": 5324352162,
+      "S": 5324352163,
+      "XL": 5324352164,
+      "XS": 5324352170,
+    },
   },
   {
     id: "prod_002",
@@ -42,12 +51,20 @@ export const MOCK_PRODUCTS: Product[] = [
     isNew: true,
     isSoldOut: false,
     description:
-      "Pigment-dyed washed black pullover (Independent PRM4500). Full-back sunset-and-dirt-road print with the mantra arched in cream and gold.",
+      "Garment-dyed black pullover (Comfort Colors 1467). Full-back sunset-and-dirt-road print with the mantra arched in cream and gold.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    image: "/images/products/hoodie-live-each-day.webp",
+    image: "/images/products/printful/hoodie-live-each-day.jpg",
     cartoonImage: "/images/products/hoodie-live-each-day-cartoon.webp",
-    printfulProductId: 542,
-    printfulColor: "Pigment Black",
+    printfulProductId: 969,
+    printfulColor: "Black",
+    printfulVariantIds: {
+      "2XL": 5324368978,
+      "3XL": 5324368979,
+      "L": 5324368980,
+      "M": 5324368981,
+      "S": 5324368982,
+      "XL": 5324368983,
+    },
   },
   {
     id: "prod_003",
@@ -60,10 +77,17 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Army olive pullover (Independent SS4500). Dripping liquid-gold HOODLUMS COUNTRY CLUB lettering melts down the chest. Limited drop.",
     sizes: ["S", "M", "L", "XL", "2XL"],
-    image: "/images/products/hoodie-camo-crossover.webp",
+    image: "/images/products/printful/hoodie-liquid-gold.jpg",
     cartoonImage: "/images/products/hoodie-camo-crossover-cartoon.webp",
     printfulProductId: 602,
     printfulColor: "Army",
+    printfulVariantIds: {
+      "2XL": 5324353133,
+      "L": 5324353135,
+      "M": 5324353136,
+      "S": 5324353137,
+      "XL": 5324353138,
+    },
   },
   {
     id: "prod_004",
@@ -76,10 +100,17 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Black full-zip hoodie (Independent SS4500Z). Biker-patch crest on the back: crossed shotgun and fishing rod, EST. 2024 arc.",
     sizes: ["S", "M", "L", "XL", "2XL"],
-    image: "/images/products/hoodie-crew.webp",
+    image: "/images/products/printful/hoodie-crew.jpg",
     cartoonImage: "/images/products/hoodie-crew-cartoon.webp",
     printfulProductId: 584,
     printfulColor: "Black",
+    printfulVariantIds: {
+      "2XL": 5324353587,
+      "L": 5324353588,
+      "M": 5324353589,
+      "S": 5324353590,
+      "XL": 5324353591,
+    },
   },
   {
     id: "prod_005",
@@ -92,10 +123,17 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Alpine green pullover (Independent SS4500). Golden tree-of-life graphic — roots spell HOODLUMS, branches spell COUNTRY CLUB.",
     sizes: ["S", "M", "L", "XL", "2XL"],
-    image: "/images/products/hoodie-from-the-dirt.webp",
+    image: "/images/products/printful/hoodie-from-the-dirt.jpg",
     cartoonImage: "/images/products/hoodie-from-the-dirt-cartoon.webp",
     printfulProductId: 602,
     printfulColor: "Alpine Green",
+    printfulVariantIds: {
+      "2XL": 5324401323,
+      "L": 5324401373,
+      "M": 5324401374,
+      "S": 5324401375,
+      "XL": 5324401376,
+    },
   },
 
   // ---------- TEES ----------
@@ -110,10 +148,19 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Garment-dyed heavyweight black tee (Comfort Colors 1717). Stacked cream-gold HOODLUMS COUNTRY CLUB with cracked vintage print texture.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-og-logo.webp",
+    image: "/images/products/printful/tee-og-logo.jpg",
     cartoonImage: "/images/products/tee-og-logo-cartoon.webp",
     printfulProductId: 586,
     printfulColor: "Black",
+    printfulVariantIds: {
+      "2XL": 5324342789,
+      "3XL": 5324342790,
+      "4XL": 5324342791,
+      "L": 5324342792,
+      "M": 5324342817,
+      "S": 5324342818,
+      "XL": 5324342819,
+    },
   },
   {
     id: "prod_007",
@@ -126,10 +173,18 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Oversized garment-dyed Vintage White tee (Bella + Canvas 4810). Burnout-truck illustration with the dual-identity slogan in gold-outlined brown.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    image: "/images/products/tee-country-raised.webp",
+    image: "/images/products/printful/tee-country-raised.jpg",
     cartoonImage: "/images/products/tee-country-raised-cartoon.webp",
     printfulProductId: 880,
     printfulColor: "Vintage White",
+    printfulVariantIds: {
+      "2XL": 5324417420,
+      "3XL": 5324417421,
+      "L": 5324417422,
+      "M": 5324417423,
+      "S": 5324417424,
+      "XL": 5324417425,
+    },
   },
   {
     id: "prod_008",
@@ -142,10 +197,19 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Garment-dyed black tee (Comfort Colors 1717). Tattoo-style cowboy skull with gold grillz, crossed fishing rods, and blackletter brand arc.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-skull-country.webp",
+    image: "/images/products/printful/tee-skull-country.jpg",
     cartoonImage: "/images/products/tee-skull-country-cartoon.webp",
     printfulProductId: 586,
     printfulColor: "Black",
+    printfulVariantIds: {
+      "2XL": 5324417731,
+      "3XL": 5324417732,
+      "4XL": 5324417733,
+      "L": 5324417734,
+      "M": 5324417735,
+      "S": 5324417736,
+      "XL": 5324417737,
+    },
   },
   {
     id: "prod_009",
@@ -158,10 +222,19 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Premium charcoal heather tee (Cotton Heritage MC1086). PROPERTY OF · HOODLUMS COUNTRY CLUB · ATHLETIC DEPT. varsity print with cracked vintage texture.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-property-of.webp",
+    image: "/images/products/printful/tee-property-of.jpg",
     cartoonImage: "/images/products/tee-property-of-cartoon.webp",
     printfulProductId: 508,
     printfulColor: "Charcoal Heather",
+    printfulVariantIds: {
+      "2XL": 5324418350,
+      "3XL": 5324418351,
+      "4XL": 5324418352,
+      "L": 5324418353,
+      "M": 5324418354,
+      "S": 5324418355,
+      "XL": 5324418356,
+    },
   },
   {
     id: "prod_010",
@@ -174,10 +247,19 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Garment-dyed black tee (Comfort Colors 1717). Framed bonfire-at-night back print in warm gold tones. Small CH front chest hit.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
-    image: "/images/products/tee-scenic-back.webp",
+    image: "/images/products/printful/tee-scenic-back.jpg",
     cartoonImage: "/images/products/tee-scenic-back-cartoon.webp",
     printfulProductId: 586,
     printfulColor: "Black",
+    printfulVariantIds: {
+      "2XL": 5324419102,
+      "3XL": 5324419103,
+      "4XL": 5324419104,
+      "L": 5324419105,
+      "M": 5324419106,
+      "S": 5324419107,
+      "XL": 5324419108,
+    },
   },
   {
     id: "prod_011",
@@ -190,10 +272,18 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Oversized washed black tee (Bella + Canvas 4810). Massive HOODLUM impact font with gold drop-shadow, tiny country club cursive above.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    image: "/images/products/tee-bold-statement.webp",
+    image: "/images/products/printful/tee-bold-statement.jpg",
     cartoonImage: "/images/products/tee-bold-statement-cartoon.webp",
     printfulProductId: 880,
     printfulColor: "Washed Black",
+    printfulVariantIds: {
+      "2XL": 5324419520,
+      "3XL": 5324419521,
+      "L": 5324419522,
+      "M": 5324419523,
+      "S": 5324419524,
+      "XL": 5324419525,
+    },
   },
 
   // ---------- HATS (NOT Printful — leather/embroidered, sourced separately) ----------
@@ -294,10 +384,18 @@ export const MOCK_PRODUCTS: Product[] = [
     description:
       "Garment-dyed Pepper (washed gray) crewneck (Comfort Colors 1466). Retro collegiate HOODLUMS COUNTRY CLUB in cream with gold outline.",
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    image: "/images/products/crewneck-vintage.webp",
+    image: "/images/products/printful/crewneck-vintage.jpg",
     cartoonImage: "/images/products/crewneck-vintage-cartoon.webp",
     printfulProductId: 971,
     printfulColor: "Pepper",
+    printfulVariantIds: {
+      "2XL": 5324420174,
+      "3XL": 5324420175,
+      "L": 5324420176,
+      "M": 5324420177,
+      "S": 5324420178,
+      "XL": 5324420179,
+    },
   },
   {
     id: "prod_017",

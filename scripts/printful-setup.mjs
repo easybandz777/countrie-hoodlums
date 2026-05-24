@@ -119,14 +119,21 @@ async function loadProductManifest() {
 }
 
 async function uploadFile(slug, absPath) {
-  const buf = await fs.readFile(absPath);
-  const base64 = buf.toString("base64");
+  const base = process.env.PRINTFUL_ARTWORK_URL_BASE;
+  if (!base) {
+    throw new Error(
+      "PRINTFUL_ARTWORK_URL_BASE not set. Printful /files requires a publicly-fetchable URL. " +
+        "Start a tunnel (e.g. cloudflared) pointing at a local server serving ./artwork, " +
+        "then export PRINTFUL_ARTWORK_URL_BASE=https://your-tunnel.example."
+    );
+  }
+  // Touch the file so we fail fast if it's missing
+  await fs.access(absPath);
   const body = await pfJson("/files", {
     method: "POST",
     body: JSON.stringify({
       type: "default",
-      filename: `${slug}.png`,
-      url: `data:image/png;base64,${base64}`,
+      url: `${base.replace(/\/$/, "")}/${slug}.png`,
     }),
   });
   const file = body.result;
@@ -158,9 +165,22 @@ async function pickVariants(productId, colorName, wantedSizes) {
   return matches;
 }
 
-async function generateMockups(productId, fileId, variantIds) {
-  // Use front placement; back-print products are handled by the brand
-  // description text and we still get a clean front mockup for the card.
+async function getFrontPrintArea(productId, variantId) {
+  const spec = await pfJson(`/mockup-generator/printfiles/${productId}`);
+  const r = spec.result;
+  const vp = r.variant_printfiles.find((v) => v.variant_id === variantId);
+  if (!vp?.placements?.front) {
+    throw new Error(
+      `Product ${productId} has no 'front' placement for variant ${variantId}`
+    );
+  }
+  const pf = r.printfiles.find((p) => p.printfile_id === vp.placements.front);
+  if (!pf) throw new Error(`Printfile ${vp.placements.front} not found in spec`);
+  return { width: pf.width, height: pf.height };
+}
+
+async function generateMockups(productId, imageUrl, variantIds) {
+  const area = await getFrontPrintArea(productId, variantIds[0]);
   const task = await pfJson(
     `/mockup-generator/create-task/${productId}`,
     {
@@ -168,7 +188,20 @@ async function generateMockups(productId, fileId, variantIds) {
       body: JSON.stringify({
         variant_ids: variantIds,
         format: "jpg",
-        files: [{ placement: "front", image_url: undefined, image_id: fileId }],
+        files: [
+          {
+            placement: "front",
+            image_url: imageUrl,
+            position: {
+              area_width: area.width,
+              area_height: area.height,
+              width: area.width,
+              height: area.height,
+              top: 0,
+              left: 0,
+            },
+          },
+        ],
       }),
     }
   );
@@ -230,7 +263,15 @@ async function createOrFetchSyncProduct({
       })),
     }),
   });
-  return created.result;
+  // POST returns a flat summary; fetch full nested structure (sync_product + sync_variants)
+  const newId = created.result?.sync_product?.id ?? created.result?.id;
+  if (!newId) {
+    throw new Error(
+      `Unexpected POST /store/products response: ${JSON.stringify(created).slice(0, 500)}`
+    );
+  }
+  const detail = await pfJson(`/store/products/${newId}`);
+  return detail.result;
 }
 
 async function patchMockData({ slug, imageRelPath, variantIdsBySize }) {
@@ -283,9 +324,10 @@ async function processProduct(p, opts) {
   console.log(`      matched ${variants.length} variants`);
 
   console.log(`  3/5 generating mockups...`);
+  const artworkUrl = `${process.env.PRINTFUL_ARTWORK_URL_BASE.replace(/\/$/, "")}/${p.slug}.png`;
   const mockups = await generateMockups(
     p.productId,
-    file.id,
+    artworkUrl,
     variants.map((v) => v.id)
   );
   const front = mockups[0];
