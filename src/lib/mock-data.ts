@@ -432,34 +432,6 @@ export const MOCK_PRODUCTS: Product[] = [
 
   // ---------- HATS (NOT Printful — leather/embroidered, sourced separately) ----------
   {
-    id: "prod_012",
-    name: "Classic Trucker",
-    slug: "hat-classic-trucker",
-    price: 34,
-    category: "hats",
-    isNew: true,
-    isSoldOut: false,
-    description:
-      "Richardson 112 — black twill front, woodland camo mesh back, gold rope-style embroidered logo.",
-    sizes: ["One Size"],
-    image: "/images/products/hat-classic-trucker.webp",
-    cartoonImage: "/images/products/hat-classic-trucker-cartoon.webp",
-  },
-  {
-    id: "prod_013",
-    name: "Leather Patch Trucker",
-    slug: "hat-leather-patch",
-    price: 38,
-    category: "hats",
-    isNew: false,
-    isSoldOut: false,
-    description:
-      "Richardson 112 all-black with laser-engraved CH genuine leather patch. Handcrafted small-batch feel.",
-    sizes: ["One Size"],
-    image: "/images/products/hat-leather-patch.webp",
-    cartoonImage: "/images/products/hat-leather-patch-cartoon.webp",
-  },
-  {
     id: "prod_021",
     name: "Mascot Patch Hat",
     slug: "hat-leather-mascot-skull",
@@ -557,21 +529,6 @@ export const MOCK_PRODUCTS: Product[] = [
     image: "/images/products/hat-dad-hat.webp",
     cartoonImage: "/images/products/hat-dad-hat-cartoon.webp",
   },
-  {
-    id: "prod_015",
-    name: "Gold Brim Snapback",
-    slug: "hat-snapback",
-    price: 36,
-    category: "hats",
-    isNew: false,
-    isSoldOut: false,
-    description:
-      "Richardson 511 flat brim. Black panels with metallic gold brim and 3D puff CH monogram.",
-    sizes: ["One Size"],
-    image: "/images/products/hat-snapback.webp",
-    cartoonImage: "/images/products/hat-snapback-cartoon.webp",
-  },
-
   // ---------- CREWNECKS (grouped under hoodies) ----------
   {
     id: "prod_016",
@@ -597,66 +554,5 @@ export const MOCK_PRODUCTS: Product[] = [
       "XL": 5324420179,
     },
   },
-  {
-    id: "prod_017",
-    name: "Chain-Stitch Crewneck",
-    slug: "crewneck-embroidered",
-    price: 75,
-    category: "hoodies",
-    isNew: false,
-    isSoldOut: false,
-    description:
-      "Black crewneck (Champion S149). Minimal gold chain-stitch Hoodlums Country Club script on the left chest.",
-    sizes: ["S", "M", "L", "XL", "2XL"],
-    image: "/images/products/crewneck-embroidered.webp",
-    cartoonImage: "/images/products/crewneck-embroidered-cartoon.webp",
-    printfulProductId: 318,
-    printfulColor: "Black",
-  },
-  {
-    id: "prod_018",
-    name: "Compass Crewneck",
-    slug: "crewneck-graphic",
-    price: 70,
-    category: "hoodies",
-    isNew: false,
-    isSoldOut: false,
-    description:
-      "Garment-dyed Pepper crewneck (Comfort Colors 1466). Golden compass-rose graphic with dirt-road horizon at the center.",
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    image: "/images/products/crewneck-graphic.webp",
-    cartoonImage: "/images/products/crewneck-graphic-cartoon.webp",
-    printfulProductId: 971,
-    printfulColor: "Pepper",
-  },
-
   // ---------- ACCESSORIES ----------
-  {
-    id: "prod_019",
-    name: "The Collection Sticker Pack",
-    slug: "collection-flatlay",
-    price: 12,
-    category: "accessories",
-    isNew: true,
-    isSoldOut: false,
-    description:
-      "Six die-cut vinyl stickers featuring the full Hoodlums Country Club collection. Waterproof and weatherproof.",
-    sizes: [],
-    image: "/images/products/collection-flatlay.webp",
-    cartoonImage: "/images/products/collection-flatlay-cartoon.webp",
-  },
-  {
-    id: "prod_020",
-    name: "Mood Board Pin Set",
-    slug: "lifestyle-moodboard",
-    price: 18,
-    category: "accessories",
-    isNew: true,
-    isSoldOut: false,
-    description:
-      "Four enamel pins capturing the brand mood: hoodie, hat, lantern stack, bonfire cooler. Gold edges throughout.",
-    sizes: [],
-    image: "/images/products/lifestyle-moodboard.webp",
-    cartoonImage: "/images/products/lifestyle-moodboard-cartoon.webp",
-  },
 ];
