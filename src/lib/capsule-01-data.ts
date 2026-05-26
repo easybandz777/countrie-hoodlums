@@ -137,8 +137,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Tailgate down, sun going, phone off. 250 made. That's it.",
     printfulProductId: 515,
     fulfillmentPath: "off-platform",
-    previewImage: "/artwork/capsule-01/piece-03-back.png",
-    previewIsProductMockup: false,
+    previewImage: "/images/products/capsule-01/piece-03-last-light.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "4",

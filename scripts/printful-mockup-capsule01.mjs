@@ -60,13 +60,11 @@ const PIECES = [
     artworkFile: "piece-04-back.png",
     catalogProductId: 542,
     variantId: 13665, // Independent PRM4500 Pigment Black, L
-    // Blank is embroidery-only; the brief's screenprinted back shield can
-    // only be fulfilled off-platform (LA Apparel / SOS From Texas). For
-    // the marketing preview, use embroidery_large_center so the shield
-    // shows on the front center as a placeholder until off-platform
-    // mockups are commissioned.
-    placement: "embroidery_large_center",
-    label: "Order of the Hoodlum FLAGSHIP (PRM4500 Black, embroidery preview — off-platform back-print pending)",
+    // Blank is embroidery-only. embroidery_chest_center is the placement
+    // the create-task API actually accepts (large_center is listed in the
+    // printfiles spec but the API rejects it for this product).
+    placement: "embroidery_chest_center",
+    label: "Order of the Hoodlum FLAGSHIP (PRM4500 Black, chest embroidery — back shield is off-platform)",
   },
   {
     number: 3,
@@ -74,11 +72,17 @@ const PIECES = [
     artworkFile: "piece-03-back.png",
     catalogProductId: 515,
     variantId: 12959, // Shaka SHHTDS Black/White tie-dye, L
-    // Blank only supports embroidery placements on Printful. Brief's
-    // discharge-print-on-tie-dye back is off-platform fulfillment;
-    // use embroidery_large_center for the marketing preview.
-    placement: "embroidery_large_center",
-    label: "Last Light Tie-Dye Tee (Shaka SHHTDS, embroidery preview — off-platform discharge pending)",
+    placement: "embroidery_chest_center",
+    label: "Last Light Tie-Dye Tee (Shaka SHHTDS, chest embroidery — back discharge is off-platform)",
+  },
+  {
+    number: 8,
+    slug: "piece-08-club-issue",
+    artworkFile: "piece-08-front.png",
+    catalogProductId: 464,
+    variantId: 11988, // Champion GDS101, L
+    placement: "embroidery_chest_center",
+    label: "Club Issue No. 24 Hoodie (Champion GDS101, tonal chest medallion)",
   },
   {
     number: 6,
