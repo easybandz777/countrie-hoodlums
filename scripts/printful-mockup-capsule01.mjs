@@ -69,11 +69,14 @@ const PIECES = [
   {
     number: 3,
     slug: "piece-03-last-light",
-    artworkFile: "piece-03-back.png",
+    // Brief-spec'd "tiny edition stamp at left chest" — separate from the
+    // back-panel cinematic landscape (piece-03-back.png) which is
+    // off-platform fulfillment via discharge print.
+    artworkFile: "piece-03-chest.png",
     catalogProductId: 515,
     variantId: 12959, // Shaka SHHTDS Black/White tie-dye, L
-    placement: "embroidery_chest_center",
-    label: "Last Light Tie-Dye Tee (Shaka SHHTDS, chest embroidery — back discharge is off-platform)",
+    placement: "embroidery_chest_left",
+    label: "Last Light Tee (Shaka SHHTDS, chest edition stamp — back landscape is off-platform)",
   },
   {
     number: 8,
@@ -248,7 +251,7 @@ async function processPiece(p) {
   // Cache-bust suffix so Printful's /files endpoint re-fetches when the
   // underlying artwork has changed (e.g. after alpha-keying). Bump
   // ARTWORK_VERSION when you re-upload art with the same filename.
-  const ARTWORK_VERSION = "keyed-v3";
+  const ARTWORK_VERSION = "keyed-v4";
   const artworkUrl = `${PUBLIC_BASE}/artwork/capsule-01/${p.artworkFile}?v=${ARTWORK_VERSION}`;
   console.log(`  1/4 uploading artwork`);
   const file = await uploadFile(artworkUrl);
