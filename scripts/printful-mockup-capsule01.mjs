@@ -248,7 +248,7 @@ async function processPiece(p) {
   // Cache-bust suffix so Printful's /files endpoint re-fetches when the
   // underlying artwork has changed (e.g. after alpha-keying). Bump
   // ARTWORK_VERSION when you re-upload art with the same filename.
-  const ARTWORK_VERSION = "keyed-v1";
+  const ARTWORK_VERSION = "keyed-v2";
   const artworkUrl = `${PUBLIC_BASE}/artwork/capsule-01/${p.artworkFile}?v=${ARTWORK_VERSION}`;
   console.log(`  1/4 uploading artwork`);
   const file = await uploadFile(artworkUrl);
