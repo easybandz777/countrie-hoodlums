@@ -28,8 +28,14 @@ import sys
 from PIL import Image
 import numpy as np
 
-INPUT_DIR = "/Users/williambeltz/Documents/countrie-hoodlums/artwork/capsule-01"
-BACKUP_DIR = os.path.join(INPUT_DIR, "originals")
+ROOT = "/Users/williambeltz/Documents/countrie-hoodlums"
+# Process both copies: gitignored /artwork (image-gen source) AND
+# /public/artwork (committed, served from thecountriehoodlums.com so the
+# Printful mockup generator can fetch via URL).
+INPUT_DIRS = [
+    os.path.join(ROOT, "artwork/capsule-01"),
+    os.path.join(ROOT, "public/artwork/capsule-01"),
+]
 
 FILES = [
     "piece-01-back.png",
@@ -46,50 +52,57 @@ WHITE_LOW = 230
 WHITE_HIGH = 250
 
 
+def key_one(src: str, backup: str) -> None:
+    """Alpha-key src in-place. Idempotent."""
+    if not os.path.exists(src):
+        print(f"SKIP missing: {src}", file=sys.stderr)
+        return
+
+    if not os.path.exists(backup):
+        os.makedirs(os.path.dirname(backup), exist_ok=True)
+        with open(src, "rb") as inp, open(backup, "wb") as out:
+            out.write(inp.read())
+
+    probe = Image.open(src)
+    if probe.mode == "RGBA":
+        alpha_min = np.array(probe)[:, :, 3].min()
+        if alpha_min < 255:
+            print(f"SKIP already keyed: {src}")
+            probe.close()
+            return
+    probe.close()
+
+    im = Image.open(src).convert("RGB")
+    arr = np.array(im)
+    R, G, B = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
+    min_ch = np.minimum(np.minimum(R, G), B).astype(np.int32)
+
+    alpha = np.clip(
+        (WHITE_HIGH - min_ch) * (255.0 / (WHITE_HIGH - WHITE_LOW)),
+        0, 255,
+    ).astype(np.uint8)
+
+    rgba = np.dstack([arr, alpha])
+    out = Image.fromarray(rgba, mode="RGBA")
+    out.save(src, "PNG", optimize=True)
+
+    transparent_pct = (alpha == 0).sum() / alpha.size * 100
+    opaque_pct = (alpha == 255).sum() / alpha.size * 100
+    print(
+        f"OK {src}: keyed "
+        f"({transparent_pct:.1f}% transparent, "
+        f"{opaque_pct:.1f}% fully opaque)"
+    )
+
+
 def main() -> int:
-    os.makedirs(BACKUP_DIR, exist_ok=True)
-    for fname in FILES:
-        src = os.path.join(INPUT_DIR, fname)
-        backup = os.path.join(BACKUP_DIR, fname)
-
-        if not os.path.exists(src):
-            print(f"SKIP missing: {fname}", file=sys.stderr)
-            continue
-
-        if not os.path.exists(backup):
-            with open(src, "rb") as inp, open(backup, "wb") as out:
-                out.write(inp.read())
-
-        probe = Image.open(src)
-        if probe.mode == "RGBA":
-            alpha_min = np.array(probe)[:, :, 3].min()
-            if alpha_min < 255:
-                print(f"SKIP already keyed: {fname}")
-                probe.close()
-                continue
-        probe.close()
-
-        im = Image.open(src).convert("RGB")
-        arr = np.array(im)
-        R, G, B = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
-        min_ch = np.minimum(np.minimum(R, G), B).astype(np.int32)
-
-        alpha = np.clip(
-            (WHITE_HIGH - min_ch) * (255.0 / (WHITE_HIGH - WHITE_LOW)),
-            0, 255,
-        ).astype(np.uint8)
-
-        rgba = np.dstack([arr, alpha])
-        out = Image.fromarray(rgba, mode="RGBA")
-        out.save(src, "PNG", optimize=True)
-
-        transparent_pct = (alpha == 0).sum() / alpha.size * 100
-        opaque_pct = (alpha == 255).sum() / alpha.size * 100
-        print(
-            f"OK {fname}: keyed "
-            f"({transparent_pct:.1f}% transparent, "
-            f"{opaque_pct:.1f}% fully opaque)"
-        )
+    for input_dir in INPUT_DIRS:
+        backup_dir = os.path.join(input_dir, "originals")
+        for fname in FILES:
+            key_one(
+                os.path.join(input_dir, fname),
+                os.path.join(backup_dir, fname),
+            )
     return 0
 
 
