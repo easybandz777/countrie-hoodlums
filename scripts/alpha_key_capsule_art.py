@@ -45,6 +45,7 @@ FILES = [
     "piece-05-hood.png",
     "piece-06-front.png",
     "piece-07-front.png",
+    "piece-08-front.png",
     "piece-09-front.png",
 ]
 
