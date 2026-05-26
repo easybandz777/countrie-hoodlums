@@ -157,8 +157,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Only 200 get inducted. The rest just hear about it.",
     printfulProductId: 542,
     fulfillmentPath: "off-platform",
-    previewImage: "/artwork/capsule-01/piece-04-back.png",
-    previewIsProductMockup: false,
+    previewImage: "/images/products/capsule-01/piece-04-order-flagship.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "5",
@@ -237,8 +237,8 @@ export const CAPSULE_01_PIECES: CapsulePiece[] = [
     igHook: "Charter members only. No. 024 of 150. Bad decisions, good times.",
     printfulProductId: 464,
     fulfillmentPath: "off-platform",
-    previewImage: "/artwork/capsule-01/piece-08-front.png",
-    previewIsProductMockup: false,
+    previewImage: "/images/products/capsule-01/piece-08-club-issue.jpg",
+    previewIsProductMockup: true,
   },
   {
     number: "9",
