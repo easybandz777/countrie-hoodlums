@@ -56,7 +56,7 @@ export default function Capsule01Page() {
             className="font-display font-bold uppercase tracking-tighter leading-[0.85]"
             style={{
               fontSize: "clamp(3.5rem, 13vw, 11rem)",
-              background: "linear-gradient(180deg, #FAFAFA 0%, #5A5A5A 100%)",
+              background: "linear-gradient(180deg, #F5F0E1 0%, #5A5A5A 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

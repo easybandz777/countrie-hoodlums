@@ -60,7 +60,7 @@ export default function ReturnsPolicyPage() {
         To start a return or exchange, email us at{" "}
         <a
           href="mailto:support@thehoodlumscountryclub.com"
-          className="text-[#C8A84B] underline hover:text-white transition-colors"
+          className="text-[#C9A227] underline hover:text-cream transition-colors"
         >
           support@thehoodlumscountryclub.com
         </a>{" "}

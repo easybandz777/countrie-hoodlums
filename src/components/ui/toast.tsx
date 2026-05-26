@@ -33,7 +33,7 @@ function ToastItem({
     <div
       className={`
         flex items-center justify-between gap-3 px-4 py-3 rounded-lg border
-        text-white shadow-lg min-w-[280px] max-w-[380px]
+        text-cream shadow-lg min-w-[280px] max-w-[380px]
         transition-all duration-300 ease-out
         ${visible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}
         ${typeStyles[toast.type]}
@@ -43,7 +43,7 @@ function ToastItem({
       <p className="text-sm font-medium">{toast.message}</p>
       <button
         onClick={() => removeToast(toast.id)}
-        className="shrink-0 rounded p-1 hover:bg-white/20 transition-colors"
+        className="shrink-0 rounded p-1 hover:bg-cream/20 transition-colors"
         aria-label="Close toast"
       >
         <svg

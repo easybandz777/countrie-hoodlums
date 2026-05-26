@@ -128,7 +128,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Column 1: Brand */}
           <div className="space-y-4">
-            <h2 className="text-white text-xl font-bold tracking-widest uppercase font-display">
+            <h2 className="text-cream text-xl font-bold tracking-widest uppercase font-display">
               HOODLUMS COUNTRY CLUB
             </h2>
             <p className="text-[#8A8A8A] text-sm leading-relaxed">
@@ -142,7 +142,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="text-[#8A8A8A] hover:text-white transition-colors duration-200"
+                  className="text-[#8A8A8A] hover:text-cream transition-colors duration-200"
                 >
                   <social.icon />
                 </a>
@@ -152,7 +152,7 @@ export default function Footer() {
 
           {/* Column 2: Shop */}
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            <h3 className="text-cream text-sm font-semibold uppercase tracking-wider mb-4">
               Shop
             </h3>
             <ul className="space-y-3">
@@ -160,7 +160,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[#8A8A8A] hover:text-white text-sm transition-colors duration-200"
+                    className="text-[#8A8A8A] hover:text-cream text-sm transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -171,7 +171,7 @@ export default function Footer() {
 
           {/* Column 3: Info */}
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            <h3 className="text-cream text-sm font-semibold uppercase tracking-wider mb-4">
               Info
             </h3>
             <ul className="space-y-3">
@@ -179,7 +179,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[#8A8A8A] hover:text-white text-sm transition-colors duration-200"
+                    className="text-[#8A8A8A] hover:text-cream text-sm transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -191,7 +191,7 @@ export default function Footer() {
           {/* Column 4: Policies + Newsletter */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+              <h3 className="text-cream text-sm font-semibold uppercase tracking-wider mb-4">
                 Policies
               </h3>
               <ul className="space-y-3">
@@ -199,7 +199,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[#8A8A8A] hover:text-white text-sm transition-colors duration-200"
+                      className="text-[#8A8A8A] hover:text-cream text-sm transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -209,7 +209,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-3">
+              <h3 className="text-cream text-sm font-semibold uppercase tracking-wider mb-3">
                 Newsletter
               </h3>
               <p className="text-[#8A8A8A] text-xs mb-3">
@@ -225,18 +225,18 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
                   required
-                  className="flex-1 bg-[#1A1A1A] border border-[#2A2A2A] rounded px-3 py-2 text-sm text-white placeholder:text-[#5A5A5A] focus:outline-none focus:border-[#C8A951] transition-colors duration-200"
+                  className="flex-1 bg-[#1A1A1A] border border-[#2A2A2A] rounded px-3 py-2 text-sm text-cream placeholder:text-[#5A5A5A] focus:outline-none focus:border-[#C9A227] transition-colors duration-200"
                 />
                 <button
                   type="submit"
-                  className="bg-[#C8A951] hover:bg-[#D4B95F] text-black px-3 py-2 rounded transition-colors duration-200"
+                  className="bg-[#C9A227] hover:bg-[#D4B95F] text-black px-3 py-2 rounded transition-colors duration-200"
                   aria-label="Subscribe to newsletter"
                 >
                   <Mail size={16} />
                 </button>
               </form>
               {subscribed && (
-                <p className="text-[#C8A951] text-xs mt-2">
+                <p className="text-[#C9A227] text-xs mt-2">
                   Thanks for subscribing!
                 </p>
               )}

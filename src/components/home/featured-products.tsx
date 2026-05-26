@@ -31,7 +31,7 @@ export default function FeaturedProducts() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display tracking-wide">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cream font-display tracking-wide">
             LATEST DROP
           </h2>
           <div className="mt-3 mx-auto w-16 h-1 bg-accent rounded-full" />
@@ -68,7 +68,7 @@ export default function FeaturedProducts() {
 
               {/* Product Info */}
               <div className="p-4 space-y-3">
-                <h3 className="text-white font-medium text-sm uppercase tracking-wide">
+                <h3 className="text-cream font-medium text-sm uppercase tracking-wide">
                   <Link href={`/shop/${product.slug}`} className="hover:text-accent transition-colors">
                     {product.name}
                   </Link>
@@ -91,7 +91,7 @@ export default function FeaturedProducts() {
         <div className="text-center mt-12">
           <Link
             href="/shop"
-            className="inline-flex items-center gap-2 text-accent hover:text-white font-semibold text-sm uppercase tracking-widest transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-accent hover:text-cream font-semibold text-sm uppercase tracking-widest transition-colors duration-200"
           >
             SHOP ALL
             <span aria-hidden="true">&rarr;</span>

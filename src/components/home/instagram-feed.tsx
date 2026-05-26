@@ -28,14 +28,14 @@ export default function InstagramFeed() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display tracking-wide">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cream font-display tracking-wide">
             FOLLOW THE MOVEMENT
           </h2>
           <a
             href="https://instagram.com/hoodlumscountryclub"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-3 text-accent hover:text-white text-sm font-medium transition-colors duration-200"
+            className="inline-block mt-3 text-accent hover:text-cream text-sm font-medium transition-colors duration-200"
           >
             @hoodlumscountryclub
           </a>
@@ -57,7 +57,7 @@ export default function InstagramFeed() {
 
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-white">
+                <div className="text-cream">
                   <InstagramIcon />
                 </div>
               </div>

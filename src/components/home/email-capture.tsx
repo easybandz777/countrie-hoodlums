@@ -31,7 +31,7 @@ export default function EmailCapture() {
     <section className="py-16 sm:py-20 lg:py-24 bg-[#111]">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display tracking-wide">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cream font-display tracking-wide">
           JOIN THE FAMILY
         </h2>
 
@@ -51,7 +51,7 @@ export default function EmailCapture() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             required
-            className="flex-1 bg-[#1A1A1A] border border-border rounded px-4 py-3 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors duration-200"
+            className="flex-1 bg-[#1A1A1A] border border-border rounded px-4 py-3 text-sm text-cream placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors duration-200"
           />
           <button
             type="submit"

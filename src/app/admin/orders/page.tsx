@@ -51,7 +51,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
               href="https://www.printful.com/dashboard/default/orders"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-white"
+              className="underline hover:text-cream"
             >
               printful.com
             </a>
@@ -65,7 +65,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
                 href={`?key=${encodeURIComponent(key ?? "")}&status=${s}`}
                 className={`px-3 py-1.5 border ${
                   filterStatus === s
-                    ? "bg-white text-black border-white"
+                    ? "bg-cream text-black border-cream"
                     : "border-neutral-700 text-neutral-400 hover:border-neutral-400"
                 }`}
               >
@@ -107,7 +107,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
                     </span>
                   )}
                 </div>
-                <p className="text-white text-sm">{order.recipient.name}</p>
+                <p className="text-cream text-sm">{order.recipient.name}</p>
                 <p className="text-neutral-400 text-xs">
                   {order.recipient.address1}
                   {order.recipient.address2 && `, ${order.recipient.address2}`}
@@ -121,7 +121,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
               </div>
               <div className="text-right">
                 {order.retail_costs && (
-                  <p className="text-white font-bold">
+                  <p className="text-cream font-bold">
                     {order.retail_costs.currency} {order.retail_costs.total}
                   </p>
                 )}
@@ -129,7 +129,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
                   href={`https://www.printful.com/dashboard/default/orders/${order.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-2 text-xs uppercase tracking-wider underline text-neutral-300 hover:text-white"
+                  className="inline-block mt-2 text-xs uppercase tracking-wider underline text-neutral-300 hover:text-cream"
                 >
                   Open in Printful →
                 </a>

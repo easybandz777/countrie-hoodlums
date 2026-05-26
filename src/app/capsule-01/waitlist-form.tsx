@@ -48,7 +48,7 @@ export default function WaitlistForm() {
         placeholder="your@email.com"
         required
         disabled={status === "loading" || status === "success"}
-        className="flex-1 bg-[#1A1A1A] border border-border rounded px-4 py-4 text-base text-white placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors disabled:opacity-60"
+        className="flex-1 bg-[#1A1A1A] border border-border rounded px-4 py-4 text-base text-cream placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors disabled:opacity-60"
       />
       <button
         type="submit"

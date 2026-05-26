@@ -52,7 +52,7 @@ export default function CheckoutPage() {
           <p className="text-red-400 text-lg">{error}</p>
           <button
             onClick={() => router.push("/cart")}
-            className="px-6 py-2 bg-white text-black font-bold uppercase text-sm hover:bg-neutral-200 transition-colors"
+            className="px-6 py-2 bg-cream text-black font-bold uppercase text-sm hover:bg-neutral-200 transition-colors"
           >
             Return to Cart
           </button>
@@ -64,7 +64,7 @@ export default function CheckoutPage() {
   return (
     <main className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center space-y-4">
-        <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin mx-auto" />
+        <div className="w-8 h-8 border-2 border-cream border-t-transparent rounded-full animate-spin mx-auto" />
         <p className="text-neutral-400 text-lg">
           Redirecting to checkout...
         </p>

@@ -46,3 +46,6 @@ next-env.d.ts
 # Raw logo source files (processed versions live under /public/images/)
 /new logo.png
 /logo cartoon .png
+
+# Claude Code local dev config
+/.claude/

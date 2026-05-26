@@ -57,10 +57,10 @@ export default function PrivacyPolicyPage() {
       </p>
       <ul>
         <li>
-          <strong className="text-white">Stripe</strong> — payment processing
+          <strong className="text-cream">Stripe</strong> — payment processing
         </li>
         <li>
-          <strong className="text-white">Shipping carriers</strong> — order
+          <strong className="text-cream">Shipping carriers</strong> — order
           delivery (USPS, UPS, FedEx)
         </li>
       </ul>
@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
         at{" "}
         <a
           href="mailto:privacy@thehoodlumscountryclub.com"
-          className="text-[#C8A84B] underline hover:text-white transition-colors"
+          className="text-[#C9A227] underline hover:text-cream transition-colors"
         >
           privacy@thehoodlumscountryclub.com
         </a>

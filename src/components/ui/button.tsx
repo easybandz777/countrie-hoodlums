@@ -11,13 +11,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   default:
-    "bg-[#D4AF37] text-black hover:bg-[#C5A028] active:bg-[#B8932A]",
+    "bg-[#C9A227] text-black hover:bg-[#C5A028] active:bg-[#B8932A]",
   outline:
-    "border border-[#D4AF37] text-white hover:bg-[#D4AF37]/10 active:bg-[#D4AF37]/20",
+    "border border-[#C9A227] text-cream hover:bg-[#C9A227]/10 active:bg-[#C9A227]/20",
   ghost:
-    "text-white hover:bg-white/10 active:bg-white/15",
+    "text-cream hover:bg-cream/10 active:bg-cream/15",
   destructive:
-    "bg-red-600 text-white hover:bg-red-700 active:bg-red-800",
+    "bg-red-600 text-cream hover:bg-red-700 active:bg-red-800",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -37,7 +37,7 @@ export function Button({
   return (
     <button
       className={cn(
-        "inline-flex items-center justify-center font-semibold rounded-md transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-black",
+        "inline-flex items-center justify-center font-semibold rounded-md transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A227] focus-visible:ring-offset-2 focus-visible:ring-offset-black",
         "disabled:opacity-50 disabled:pointer-events-none",
         variantStyles[variant],
         sizeStyles[size],

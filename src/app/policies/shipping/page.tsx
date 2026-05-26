@@ -21,11 +21,11 @@ export default function ShippingPolicyPage() {
       <h2>Shipping Options</h2>
       <ul>
         <li>
-          <strong className="text-white">Standard Shipping:</strong> 5-7
+          <strong className="text-cream">Standard Shipping:</strong> 5-7
           business days after processing
         </li>
         <li>
-          <strong className="text-white">Express Shipping:</strong> 2-3
+          <strong className="text-cream">Express Shipping:</strong> 2-3
           business days after processing
         </li>
       </ul>
@@ -56,7 +56,7 @@ export default function ShippingPolicyPage() {
         reach out to us at{" "}
         <a
           href="mailto:support@thehoodlumscountryclub.com"
-          className="text-[#C8A84B] underline hover:text-white transition-colors"
+          className="text-[#C9A227] underline hover:text-cream transition-colors"
         >
           support@thehoodlumscountryclub.com
         </a>

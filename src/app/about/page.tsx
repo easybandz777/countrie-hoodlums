@@ -55,7 +55,7 @@ export default function AboutPage() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(45deg, transparent, transparent 40px, #D4AF37 40px, #D4AF37 41px)",
+                "repeating-linear-gradient(45deg, transparent, transparent 40px, #C9A227 40px, #C9A227 41px)",
             }}
           />
         </div>
@@ -65,7 +65,7 @@ export default function AboutPage() {
             className="font-display text-[clamp(4rem,15vw,12rem)] font-bold leading-none tracking-tighter"
             style={{
               background:
-                "linear-gradient(180deg, #FAFAFA 0%, #8A8A8A 100%)",
+                "linear-gradient(180deg, #F5F0E1 0%, #8A8A8A 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

@@ -100,7 +100,7 @@ export default function AddToCart({ product, selectedSize }: AddToCartProps) {
           "w-full py-4 font-bold text-sm uppercase tracking-widest rounded-md transition-all duration-200",
           "disabled:opacity-50 disabled:cursor-not-allowed",
           showSuccess
-            ? "bg-green-600 text-white"
+            ? "bg-green-600 text-cream"
             : "bg-gold text-black hover:bg-gold-dark active:scale-[0.98]"
         )}
       >
@@ -122,7 +122,7 @@ export default function AddToCart({ product, selectedSize }: AddToCartProps) {
       <button
         onClick={handleBuyNow}
         disabled={!canAdd}
-        className="w-full py-4 font-bold text-sm uppercase tracking-widest rounded-md border border-gold text-white hover:bg-gold/10 active:scale-[0.98] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full py-4 font-bold text-sm uppercase tracking-widest rounded-md border border-gold text-cream hover:bg-gold/10 active:scale-[0.98] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         BUY NOW
       </button>

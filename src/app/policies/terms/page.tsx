@@ -90,7 +90,7 @@ export default function TermsOfServicePage() {
         If you have questions about these terms, contact us at{" "}
         <a
           href="mailto:support@thehoodlumscountryclub.com"
-          className="text-[#C8A84B] underline hover:text-white transition-colors"
+          className="text-[#C9A227] underline hover:text-cream transition-colors"
         >
           support@thehoodlumscountryclub.com
         </a>

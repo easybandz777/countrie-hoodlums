@@ -52,7 +52,7 @@ export default function CharterRollPage() {
             className="font-display font-bold uppercase tracking-tighter leading-[0.85]"
             style={{
               fontSize: "clamp(3.5rem, 13vw, 11rem)",
-              background: "linear-gradient(180deg, #FAFAFA 0%, #5A5A5A 100%)",
+              background: "linear-gradient(180deg, #F5F0E1 0%, #5A5A5A 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -137,7 +137,7 @@ export default function CharterRollPage() {
             {PREVIEW_ROWS.map((row, i) => (
               <div
                 key={i}
-                className="grid grid-cols-12 gap-4 px-4 sm:px-6 py-5 border-b border-border/40 last:border-b-0 font-body text-sm sm:text-base text-foreground/85 hover:bg-white/[0.02] transition-colors"
+                className="grid grid-cols-12 gap-4 px-4 sm:px-6 py-5 border-b border-border/40 last:border-b-0 font-body text-sm sm:text-base text-foreground/85 hover:bg-cream/[0.02] transition-colors"
               >
                 <div className="col-span-2 font-display text-accent font-bold">
                   No. {row.number}

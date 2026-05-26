@@ -43,7 +43,7 @@ export default function Hero() {
           </Link>
           <Link
             href="/about"
-            className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold uppercase tracking-widest border-2 border-white text-white rounded hover:bg-white hover:text-background transition-colors duration-200"
+            className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold uppercase tracking-widest border-2 border-cream text-cream rounded hover:bg-cream hover:text-background transition-colors duration-200"
           >
             Our Story
           </Link>

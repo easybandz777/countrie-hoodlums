@@ -38,7 +38,7 @@ export default function SizeSelector({
                   "bg-gold text-black border-gold shadow-[0_0_10px_rgba(212,175,55,0.2)]",
                 !isSelected &&
                   !isUnavailable &&
-                  "border-border text-white hover:border-gold hover:text-gold",
+                  "border-border text-cream hover:border-gold hover:text-gold",
                 isUnavailable &&
                   "border-border text-muted-foreground line-through opacity-50 cursor-not-allowed"
               )}

@@ -35,7 +35,7 @@ export default function CheckoutSuccessPage() {
         {/* Checkmark Icon */}
         <div className="mx-auto w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
           <svg
-            className="w-8 h-8 text-white"
+            className="w-8 h-8 text-cream"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -62,14 +62,14 @@ export default function CheckoutSuccessPage() {
             {order.customerEmail && (
               <p className="text-neutral-300">
                 Confirmation sent to{" "}
-                <span className="text-white font-medium">
+                <span className="text-cream font-medium">
                   {order.customerEmail}
                 </span>
               </p>
             )}
             <p className="text-neutral-300">
               Total:{" "}
-              <span className="text-white font-medium">
+              <span className="text-cream font-medium">
                 ${(order.amountTotal / 100).toFixed(2)}
               </span>
             </p>
@@ -82,7 +82,7 @@ export default function CheckoutSuccessPage() {
 
         <Link
           href="/shop"
-          className="inline-block mt-4 px-8 py-3 bg-white text-black font-bold uppercase tracking-wider text-sm hover:bg-neutral-200 transition-colors"
+          className="inline-block mt-4 px-8 py-3 bg-cream text-black font-bold uppercase tracking-wider text-sm hover:bg-neutral-200 transition-colors"
         >
           CONTINUE SHOPPING
         </Link>

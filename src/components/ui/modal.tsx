@@ -60,7 +60,7 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+          className="absolute top-4 right-4 text-gray-400 hover:text-cream transition-colors"
           aria-label="Close modal"
         >
           <svg
@@ -81,7 +81,7 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
 
         {/* Title */}
         {title && (
-          <h2 className="mb-4 text-xl font-bold text-white">{title}</h2>
+          <h2 className="mb-4 text-xl font-bold text-cream">{title}</h2>
         )}
 
         {/* Content */}

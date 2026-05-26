@@ -41,7 +41,7 @@ export default function SizeGuidePage() {
     <div className="min-h-screen bg-[#0A0A0A] px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         {/* Heading */}
-        <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-white text-center mb-12 tracking-wide">
+        <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-cream text-center mb-12 tracking-wide">
           SIZE GUIDE
         </h1>
 
@@ -53,8 +53,8 @@ export default function SizeGuidePage() {
               onClick={() => setActiveTab(tab.key)}
               className={`px-5 py-2.5 text-sm font-semibold uppercase tracking-wider transition-all duration-200 border ${
                 activeTab === tab.key
-                  ? "bg-[#C8A84B] text-black border-[#C8A84B]"
-                  : "bg-transparent text-white border-[#333] hover:border-[#C8A84B] hover:text-[#C8A84B]"
+                  ? "bg-[#C9A227] text-black border-[#C9A227]"
+                  : "bg-transparent text-cream border-[#333] hover:border-[#C9A227] hover:text-[#C9A227]"
               }`}
             >
               {tab.label}
@@ -67,7 +67,7 @@ export default function SizeGuidePage() {
           {activeTab === "tshirts" && (
             <table className="w-full border-collapse border border-[#333]">
               <thead>
-                <tr className="bg-[#C8A84B]">
+                <tr className="bg-[#C9A227]">
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Size</th>
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Chest (in)</th>
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Length (in)</th>
@@ -82,7 +82,7 @@ export default function SizeGuidePage() {
                       i % 2 === 0 ? "bg-[#111]" : "bg-[#1A1A1A]"
                     }`}
                   >
-                    <td className="px-4 py-3 text-sm text-white font-medium">{row.size}</td>
+                    <td className="px-4 py-3 text-sm text-cream font-medium">{row.size}</td>
                     <td className="px-4 py-3 text-sm text-gray-300">{row.chest}</td>
                     <td className="px-4 py-3 text-sm text-gray-300">{row.length}</td>
                     <td className="px-4 py-3 text-sm text-gray-300">{row.sleeve}</td>
@@ -95,7 +95,7 @@ export default function SizeGuidePage() {
           {activeTab === "hoodies" && (
             <table className="w-full border-collapse border border-[#333]">
               <thead>
-                <tr className="bg-[#C8A84B]">
+                <tr className="bg-[#C9A227]">
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Size</th>
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Chest (in)</th>
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Length (in)</th>
@@ -110,7 +110,7 @@ export default function SizeGuidePage() {
                       i % 2 === 0 ? "bg-[#111]" : "bg-[#1A1A1A]"
                     }`}
                   >
-                    <td className="px-4 py-3 text-sm text-white font-medium">{row.size}</td>
+                    <td className="px-4 py-3 text-sm text-cream font-medium">{row.size}</td>
                     <td className="px-4 py-3 text-sm text-gray-300">{row.chest}</td>
                     <td className="px-4 py-3 text-sm text-gray-300">{row.length}</td>
                     <td className="px-4 py-3 text-sm text-gray-300">{row.sleeve}</td>
@@ -123,7 +123,7 @@ export default function SizeGuidePage() {
           {activeTab === "hats" && (
             <table className="w-full border-collapse border border-[#333]">
               <thead>
-                <tr className="bg-[#C8A84B]">
+                <tr className="bg-[#C9A227]">
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Size</th>
                   <th className="px-4 py-3 text-left text-sm font-bold text-black uppercase tracking-wider">Circumference (in)</th>
                 </tr>
@@ -136,7 +136,7 @@ export default function SizeGuidePage() {
                       i % 2 === 0 ? "bg-[#111]" : "bg-[#1A1A1A]"
                     }`}
                   >
-                    <td className="px-4 py-3 text-sm text-white font-medium">{row.size}</td>
+                    <td className="px-4 py-3 text-sm text-cream font-medium">{row.size}</td>
                     <td className="px-4 py-3 text-sm text-gray-300">{row.circumference}</td>
                   </tr>
                 ))}
@@ -147,12 +147,12 @@ export default function SizeGuidePage() {
 
         {/* How to Measure */}
         <section className="mt-14">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-white mb-6 tracking-wide">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-cream mb-6 tracking-wide">
             HOW TO MEASURE
           </h2>
           <div className="space-y-4">
             <div className="border border-[#333] bg-[#111] p-5">
-              <h3 className="text-[#C8A84B] font-semibold text-sm uppercase tracking-wider mb-1">
+              <h3 className="text-[#C9A227] font-semibold text-sm uppercase tracking-wider mb-1">
                 Chest
               </h3>
               <p className="text-gray-300 text-sm">
@@ -160,7 +160,7 @@ export default function SizeGuidePage() {
               </p>
             </div>
             <div className="border border-[#333] bg-[#111] p-5">
-              <h3 className="text-[#C8A84B] font-semibold text-sm uppercase tracking-wider mb-1">
+              <h3 className="text-[#C9A227] font-semibold text-sm uppercase tracking-wider mb-1">
                 Length
               </h3>
               <p className="text-gray-300 text-sm">
@@ -173,7 +173,7 @@ export default function SizeGuidePage() {
         {/* Fit Note */}
         <div className="mt-10 border border-[#333] bg-[#1A1A1A] p-6">
           <p className="text-gray-300 text-sm leading-relaxed">
-            <span className="text-[#C8A84B] font-semibold">Note:</span>{" "}
+            <span className="text-[#C9A227] font-semibold">Note:</span>{" "}
             Our tees have a relaxed, streetwear fit. If you&apos;re between sizes, size up for that oversized look.
           </p>
         </div>
