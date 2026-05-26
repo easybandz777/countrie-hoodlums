@@ -60,8 +60,13 @@ const PIECES = [
     artworkFile: "piece-04-back.png",
     catalogProductId: 542,
     variantId: 13665, // Independent PRM4500 Pigment Black, L
-    placement: "back",
-    label: "Order of the Hoodlum FLAGSHIP Hoodie (PRM4500 Black, back shield hero)",
+    // Blank is embroidery-only; the brief's screenprinted back shield can
+    // only be fulfilled off-platform (LA Apparel / SOS From Texas). For
+    // the marketing preview, use embroidery_large_center so the shield
+    // shows on the front center as a placeholder until off-platform
+    // mockups are commissioned.
+    placement: "embroidery_large_center",
+    label: "Order of the Hoodlum FLAGSHIP (PRM4500 Black, embroidery preview — off-platform back-print pending)",
   },
   {
     number: 3,
@@ -69,8 +74,11 @@ const PIECES = [
     artworkFile: "piece-03-back.png",
     catalogProductId: 515,
     variantId: 12959, // Shaka SHHTDS Black/White tie-dye, L
-    placement: "back",
-    label: "Last Light Tie-Dye Tee (Shaka SHHTDS B/W tie-dye, back landscape)",
+    // Blank only supports embroidery placements on Printful. Brief's
+    // discharge-print-on-tie-dye back is off-platform fulfillment;
+    // use embroidery_large_center for the marketing preview.
+    placement: "embroidery_large_center",
+    label: "Last Light Tie-Dye Tee (Shaka SHHTDS, embroidery preview — off-platform discharge pending)",
   },
   {
     number: 6,
@@ -124,17 +132,27 @@ function pfFetch(p, init = {}) {
   });
 }
 
-async function pfJson(p, init) {
-  const res = await pfFetch(p, init);
-  const body = await res.json();
-  if (!res.ok || (body.code && body.code >= 400)) {
-    throw new Error(
-      `Printful ${init?.method ?? "GET"} ${p} -> ${res.status}: ${
-        body.error?.message ?? JSON.stringify(body).slice(0, 300)
-      }`
-    );
+async function pfJson(p, init, retries = 3) {
+  for (let attempt = 0; ; attempt++) {
+    const res = await pfFetch(p, init);
+    const body = await res.json();
+    if (res.status === 429 && attempt < retries) {
+      const msg = body.error?.message ?? "";
+      const m = msg.match(/after (\d+) seconds/);
+      const waitSec = m ? Number(m[1]) + 2 : 30;
+      console.log(`    rate-limited — waiting ${waitSec}s (attempt ${attempt + 1}/${retries})`);
+      await new Promise((r) => setTimeout(r, waitSec * 1000));
+      continue;
+    }
+    if (!res.ok || (body.code && body.code >= 400)) {
+      throw new Error(
+        `Printful ${init?.method ?? "GET"} ${p} -> ${res.status}: ${
+          body.error?.message ?? JSON.stringify(body).slice(0, 300)
+        }`
+      );
+    }
+    return body;
   }
-  return body;
 }
 
 async function uploadFile(artworkUrl) {
@@ -268,7 +286,10 @@ async function main() {
   );
 
   const results = [];
-  for (const p of targets) {
+  for (const [i, p] of targets.entries()) {
+    if (i > 0) {
+      await new Promise((r) => setTimeout(r, 5000));
+    }
     try {
       results.push(await processPiece(p));
     } catch (err) {
