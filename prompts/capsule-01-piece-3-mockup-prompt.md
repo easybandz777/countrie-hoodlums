@@ -1,0 +1,22 @@
+# Capsule 01 — Piece 3 — Last Light, County Line — product mockup prompt
+
+**Tool:** Gemini Nano Banana 2 (image-gen via Chrome MCP fallback when ChatGPT rate-limits).
+**Target file:** `public/images/products/capsule-01/piece-03-last-light.jpg`
+**Source artwork (reference for the back-panel print only):** `artwork/capsule-01/piece-03-back.png`
+**Purpose:** Replace the raw-PNG-on-cream "Design preview" treatment currently shown for Piece 3 on `/capsule-01` with a finished product mockup that matches the composition, lighting, and finish of `piece-01-member-001.jpg`, `piece-05-hoodlums-only.jpg`, and `piece-07-chapter-01.jpg`.
+
+---
+
+## PROMPT
+
+> Photorealistic streetwear catalog photograph of a boxy heavyweight 7.5oz Shaka Wear SHHTDS tie-dye t-shirt — washed Bonfire Black `#0A0A0A` and Creek Cream `#F5F0E1` crinkle/spiral tie-dye base, absolutely no pure white anywhere, the dye chaos reading like soot and bone — laid flat on weathered reclaimed oak barn-wood planks with visible grain, splits, and old nail holes. Tee is rotated so the back panel faces camera at a slight three-quarter angle, slight diagonal tilt to hint at the front collar and shoulder seam, the entire back print clearly hero. Across the full back panel, a large cinematic sunset landscape print sits dyed into the fabric: a lifted pickup truck silhouetted on a dirt ridge with tailgate down, two small figures sitting on the tailgate facing away, a glowing antique-gold `#C9A227` bonfire to the left of the truck, a massive gnarled oak tree silhouette on the right with branches arching across the top of the scene, power lines crossing the upper third, and a perfect antique-gold circle sun halfway down a bronze-to-tobacco-olive `#4B5320` sky — the discharge ink physically bleaches the tie-dye pattern back into the "sky," so the tie-dye chaos *becomes* the cloud texture rather than fighting the print. Below the landscape, arched Western-gothic blackletter reads "WHERE THE PAVEMENT ENDS" in distressed antique gold with cursive Creek Cream subtitle "& the good times start." Tiny Creek Cream edition stamp visible at left chest reading "HCC · 01 / 250 · MMXXIV". Warm golden-hour raking light from camera-left, long soft shadows, faint dust motes catching the beam. Props arranged loosely near the hem: a tarnished brass shotgun shell, a single folded olive bandana, a worn leather work glove, a brass-rimmed shot glass with a finger of bourbon. Shot on medium-format film, shallow depth of field on props, tee razor sharp, slight Portra-400 grain, muted earth-tone color grade. Editorial Buck Mason / Filson / Cactus Plant Flea Market crossover energy. No model, no mannequin, no logos visible besides the print itself, no text overlays.
+
+---
+
+## If first generation looks off, try…
+
+- **Most common failure: Gemini flattens the tie-dye into a solid black tee.** Tie-dye is notoriously inconsistent across generators — Nano Banana especially defaults to flat dye when "tie-dye" is buried mid-prompt. Lead with the pattern: open the prompt with *"Photorealistic streetwear catalog photograph of a boxy heavyweight tie-dye t-shirt — high-contrast hand-dyed crinkle pattern in washed Bonfire Black `#0A0A0A` and Creek Cream `#F5F0E1`, dye crinkles radiating from a central scrunch with cream veins crackling through a sooty black field, no pure white, absolutely not a solid-color tee…"* before describing anything else. If it still produces a solid black tee, explicitly name the technique: *"hand-crinkle-dyed pattern, not solid"* and repeat the words "tie-dye" three times in the first two sentences.
+- If the back print bleeds into the dye and loses legibility, add: *"the back print sits cleanly inside a soft cream halo where the discharge ink has bleached the surrounding tie-dye, giving the landscape clean readable edges."*
+- If the truck/oak/bonfire scene gets cartoony, swap "cinematic sunset landscape print" for *"vintage Western tintype-postcard illustration"* and add *"silhouette art, not photographic, hand-screened, broken-ink halftone texture."*
+- If the palette drifts (pink sky, blue tones, neon gold), tighten with: *"strictly limited to Bonfire Black `#0A0A0A`, Antique Gold `#C9A227`, Creek Cream `#F5F0E1`, Tobacco Olive `#4B5320` — no other hues, no pink, no orange, no blue, no neon."*
+- If the framing feels too overhead/flat-lay-only and loses the back-panel hero read, add: *"camera angle 25-30 degrees off vertical, three-quarter overhead, back panel parallel to film plane."*
