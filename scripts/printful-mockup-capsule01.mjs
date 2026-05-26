@@ -60,8 +60,8 @@ const PIECES = [
     artworkFile: "piece-04-back.png",
     catalogProductId: 542,
     variantId: 13665, // Independent PRM4500 Pigment Black, L
-    placement: "embroidery_chest_center",
-    label: "Order of the Hoodlum FLAGSHIP Hoodie (PRM4500 Black, chest embroidery preview)",
+    placement: "back",
+    label: "Order of the Hoodlum FLAGSHIP Hoodie (PRM4500 Black, back shield hero)",
   },
   {
     number: 3,
