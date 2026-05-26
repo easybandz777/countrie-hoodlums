@@ -60,11 +60,11 @@ const PIECES = [
     artworkFile: "piece-04-back.png",
     catalogProductId: 542,
     variantId: 13665, // Independent PRM4500 Pigment Black, L
-    // Blank is embroidery-only. embroidery_chest_center is the placement
-    // the create-task API actually accepts (large_center is listed in the
-    // printfiles spec but the API rejects it for this product).
-    placement: "embroidery_chest_center",
-    label: "Order of the Hoodlum FLAGSHIP (PRM4500 Black, chest embroidery — back shield is off-platform)",
+    // Blank is embroidery-only. Use embroidery_chest_left (small, in the
+    // proper workwear breast-pocket position) — the brief's full back
+    // shield + chest medallion combo is off-platform fulfillment.
+    placement: "embroidery_chest_left",
+    label: "Order of the Hoodlum FLAGSHIP (PRM4500 Black, chest_left embroidery — back shield is off-platform)",
   },
   {
     number: 3,
@@ -245,7 +245,11 @@ async function downloadMockup(url, destAbs) {
 async function processPiece(p) {
   console.log(`\n${"=".repeat(60)}\n  Piece ${p.number}: ${p.label}\n${"=".repeat(60)}`);
 
-  const artworkUrl = `${PUBLIC_BASE}/artwork/capsule-01/${p.artworkFile}`;
+  // Cache-bust suffix so Printful's /files endpoint re-fetches when the
+  // underlying artwork has changed (e.g. after alpha-keying). Bump
+  // ARTWORK_VERSION when you re-upload art with the same filename.
+  const ARTWORK_VERSION = "keyed-v1";
+  const artworkUrl = `${PUBLIC_BASE}/artwork/capsule-01/${p.artworkFile}?v=${ARTWORK_VERSION}`;
   console.log(`  1/4 uploading artwork`);
   const file = await uploadFile(artworkUrl);
   console.log(`      file id ${file.id}`);
