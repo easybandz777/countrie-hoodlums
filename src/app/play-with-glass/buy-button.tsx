@@ -56,7 +56,7 @@ export default function BuyButton({ price, large = false }: Props) {
       price,
       size: "Charter Spot",
       quantity: 1,
-      image: "/images/crew/glass.webp",
+      image: "/images/crew/glass-emblem.webp",
       slug: "play-with-glass",
     });
     setJustAdded(true);
