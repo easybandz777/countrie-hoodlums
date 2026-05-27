@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import BuyButton from "./buy-button";
+import SpotsCounter from "./spots-counter";
 
 // Update DROP_DATE when the actual round is locked in. Keep it as a
 // human string for now — when scheduling lands, swap to an ISO date and
@@ -77,7 +78,12 @@ export default function PlayWithGlassPage() {
             {/* Stats */}
             <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-10 max-w-md">
               <Stat label="Buy-in" value={`$${PRICE_USD}`} />
-              <Stat label="Spots" value={`${TOTAL_SPOTS}`} />
+              <div>
+                <SpotsCounter fallbackTotal={TOTAL_SPOTS} />
+                <p className="mt-1 font-body text-[10px] sm:text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                  Spots
+                </p>
+              </div>
               <Stat label="Restock" value="Never" />
             </div>
 
