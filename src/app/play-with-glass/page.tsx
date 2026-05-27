@@ -95,27 +95,16 @@ export default function PlayWithGlassPage() {
             </div>
           </div>
 
-          {/* Right: portrait */}
-          <div className="relative aspect-square w-full max-w-md mx-auto lg:mx-0 lg:ml-auto rounded-lg overflow-hidden border border-accent/30 shadow-2xl shadow-black/60">
+          {/* Right: emblem — already framed + carries name/tagline */}
+          <div className="relative aspect-square w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
             <Image
-              src="/images/crew/glass.webp"
-              alt="Glass — Hoodlums Country Club crew"
+              src="/images/crew/glass-emblem.webp"
+              alt="Glass — Hoodlums Country Club. Good times. Bad decisions."
               fill
               priority
               sizes="(max-width: 1024px) 90vw, 450px"
-              className="object-cover"
+              className="object-contain drop-shadow-2xl"
             />
-            <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/95 via-black/60 to-transparent">
-              <p className="font-display text-accent text-xs uppercase tracking-[0.35em] mb-2">
-                Your host
-              </p>
-              <p className="font-display text-cream text-2xl font-bold uppercase tracking-tight">
-                Glass
-              </p>
-              <p className="font-body text-foreground/85 text-sm italic mt-1">
-                If it&apos;s broken, he probably did it — on purpose.
-              </p>
-            </div>
           </div>
         </div>
       </section>
